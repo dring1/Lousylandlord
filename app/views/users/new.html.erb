@@ -1,0 +1,57 @@
+<h1>Submit a Landlord</h1>
+
+
+
+
+<%= form_for @user, {:html => { :class => "form-horizontal" }} do |f| %>
+		<%= render 'shared/error_message' %>
+		<div class ="control-group">
+			<%= f.label "Landlord's Name : " , class:'control-label '%>
+			<div class="controls">
+				<%= f.text_field :name , class:'frm-exp' %>
+			</div>
+		</div>
+		<div class="control-group">
+			<%= f.label "Comment : ", class: "tos" ,class:'control-label' %>
+			<div class="controls">
+				<%= f.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
+			</div>
+		</div>
+
+	<%= f.label "Terms of Service", class: "tos underline center" %>
+
+	<div class="terms">
+		<p class= "terms-closed" >"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deseruLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deseruLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deseruLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deseru </p>
+	</div>
+
+	<div class='tos-wrapper center'>		
+		<%= f.label "Agree to our terms of sevice", class:'tos-check'%> 
+		<%= f.check_box :terms, class:'terms-chk checkbox' %>
+	</div>
+	<div class="center submit">
+		<%= f.submit "Submit", class: " btn btn-large btn-primary" %>
+	</div>
+<% end %>
+
+
+

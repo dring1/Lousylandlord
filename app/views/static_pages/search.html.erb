@@ -1,0 +1,11 @@
+<div class="search-form-wrapper center">
+<%= form_tag(landlords_path, :method => "get") do %>
+
+  		<%= text_field_tag :search, params[:search], placeholder:"Enter a name..." , class:"user-search-input"%>
+  		<%= submit_tag "Search", :name => nil, class: 'btn' %>
+  		<%= link_to  "All", landlords_path, class:'btn'%>  	
+<% end %> 
+	
+	<p class='search-exp-click'>About our search? </p>
+  		<p class="search-exp">We only search on the landlord's name to ensure our client's safety :)</p>
+</div>

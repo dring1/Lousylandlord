@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Landlord's name :</b>
+  <%= @user.name %>
+</p>
+
+
+<p>
+  <b>Ip:</b>
+  <%= @user.ip %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @user.comment %>
+</p>
+
+<p>
+  <b>Submit:</b>
+  <%= @user.submit %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

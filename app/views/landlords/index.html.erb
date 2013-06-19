@@ -1,0 +1,26 @@
+<h1>Landlord Results</h1>
+<div class="center" > 
+	<input type="text" class="search-query" placeholder="Filter name ... ">
+</div>
+<br>
+<table class='table table-hover'>
+<th>Landlord's Name</th>
+<th>User Comment</th>
+<th>See profile</th>
+
+  <% @landlords.each do |l| %>
+
+    <tr >     
+      <td class='user-list'>
+      	<%= content_tag(:p, l.name,  :data => {:name => l.name }) %> 
+      </td>
+      <td>
+      	<%= l.comments.count %>
+      </td>      
+      <td>
+      	<%= link_to 'Profile', l %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'Submit a Landlord', submit_path %>
