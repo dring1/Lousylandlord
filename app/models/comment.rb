@@ -2,10 +2,11 @@ class Comment < ActiveRecord::Base
 	attr_accessible :comment, :terms
 	belongs_to :landlord
 
-	validates :landlord_id, presence: true
-	validates :ip, presence: true
-	validates :terms, presence: true
-
+	#validates :landlord_id, presence: true
+	#validates :ip, presence: true
+	#validates :terms, presence: true
+    validates :comment, presence: true, 
+				length: {minimum: 15, maximum: 500}		
 
    	def self.setIP (var)
 		self.ip = var
