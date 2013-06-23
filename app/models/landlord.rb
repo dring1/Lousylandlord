@@ -18,4 +18,6 @@ class Landlord < ActiveRecord::Base
 			find(:all)
 		end
 	end
+
+    default_scope order: 'landlords.name ASC'
 end

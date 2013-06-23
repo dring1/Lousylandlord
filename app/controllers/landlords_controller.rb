@@ -9,21 +9,22 @@ class LandlordsController < ApplicationController
   end
 
   def show  	
-
+    @landlord = Landlord.find(params[:id])
   end
 
   def create  	
     #check if a landlord of the same name already exists and add comments to that
-  	@landlord = Landlord.new(params[:landlord])
+  	@landlord = Landlord.where(:name => params[:landlord][:name], :city => params[:landlord][:city], :province => params[:landlord][:province]).first_or_create!
+    @landlord.comments.create if @landlord.comments.empty? #add this step
     @landlord.comments[0].setIP request.remote_ip
-      if @landlord.save
-       # comment = Comment.find(params[:comment_id])
-        
-        flash[:success] = "Thank you for submitting a Landlord"
-        redirect_to landlords_path
-      else
-
-      end
+ 
+    if @landlord.save     
+      flash[:success] = "Thank you for submitting a Landlord"
+      redirect_to landlords_path
+    else
+      redirect_to root_path
+      flash[:fail] = "Failed to submit landlord"
+    end
 
   end
 

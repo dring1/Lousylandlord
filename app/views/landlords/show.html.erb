@@ -1,1 +1,9 @@
-<p> Write some code </p>
+
+<span> <%=	@landlord.name %> </span>
+<span> <%=	@landlord.city %> </span>
+<span> <%=	@landlord.province %> </span>
+
+
+<% @landlord.comments.each do |f| %>
+	<p> <%=   f.comment %> </p>
+<% end %>
