@@ -22,7 +22,6 @@ class LandlordsController < ApplicationController
       flash[:success] = "Thank you for submitting a Landlord"
       redirect_to landlords_path
     else
-      redirect_to root_path
       flash[:fail] = "Failed to submit landlord"
     end
 

@@ -13023,3 +13023,2166 @@ Served asset /jquery.js - 304 Not Modified (0ms)
 
 Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:22:12 -0400
 Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2013-06-23 13:23:54 -0400
+Processing by StaticPagesController#search as HTML
+  Rendered static_pages/search.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:23:54 -0400
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:23:54 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:23:54 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:23:54 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2013-06-23 13:23:55 -0400
+Processing by StaticPagesController#search as HTML
+  Rendered static_pages/search.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:23:55 -0400
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:23:55 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:23:55 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:23:55 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:23:56 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.1ms)
+  Rendered landlords/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:23:56 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:23:56 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:23:56 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:23:56 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:24:03 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 1", "city"=>"test 1", "province"=>"test 1", "comments_attributes"=>{"0"=>{"comment"=>"test 1", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[36mLandlord Load (0.2ms)[0m  [1mSELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 1' AND "landlords"."city" = 'test 1' AND "landlords"."province" = 'test 1' ORDER BY landlords.name ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = 1 ORDER BY comments.created_at DESC[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/landlords
+Completed 302 Found in 19ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:24:03 -0400
+Processing by LandlordsController#index as HTML
+  [1m[35mLandlord Load (0.1ms)[0m  SELECT "landlords".* FROM "landlords" ORDER BY landlords.name ASC, name
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 3[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 4
+  Rendered landlords/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:24:03 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:24:03 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:24:03 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:24:03 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:24:06 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.0ms)
+  Rendered landlords/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:24:06 -0400
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:24:06 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:24:06 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:24:06 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:24:10 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 1", "city"=>"test 1", "province"=>"test 1", "comments_attributes"=>{"0"=>{"comment"=>"test 1", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[36mLandlord Load (0.2ms)[0m  [1mSELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 1' AND "landlords"."city" = 'test 1' AND "landlords"."province" = 'test 1' ORDER BY landlords.name ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = 1 ORDER BY comments.created_at DESC[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/landlords
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:24:10 -0400
+Processing by LandlordsController#index as HTML
+  [1m[35mLandlord Load (0.2ms)[0m  SELECT "landlords".* FROM "landlords" ORDER BY landlords.name ASC, name
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 2[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 3[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 4
+  Rendered landlords/index.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:24:10 -0400
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:24:10 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:24:10 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:24:10 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (11.7ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (145.4ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "comment" text, "ip" varchar(255), "terms" boolean, "landlord_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (94.1ms)[0m  [1mCREATE TABLE "landlords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "city" varchar(255), "province" varchar(255)) [0m
+  [1m[35m (94.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (95.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (107.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130616182727')[0m
+  [1m[35m (95.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130610152919')
+  [1m[36m (95.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130610143128')[0m
+  [1m[35m (95.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130610142938')
+  [1m[36m (109.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130616182543')[0m
+  [1m[35m (1.9ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/search" for 127.0.0.1 at 2013-06-23 13:24:24 -0400
+Processing by StaticPagesController#search as HTML
+  Rendered static_pages/search.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 26ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:24:24 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:24:24 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:24:24 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:24:24 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:24:25 -0400
+Processing by LandlordsController#index as HTML
+  [1m[36mLandlord Load (0.3ms)[0m  [1mSELECT "landlords".* FROM "landlords" ORDER BY landlords.name ASC, name[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 2
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 3
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 4[0m
+  Rendered landlords/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:24:25 -0400
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:24:25 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:24:25 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:24:25 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (110.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (95.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.5ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to Landlords (20130610142938)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130610142938')
+  [1m[36m (91.0ms)[0m  [1mcommit transaction[0m
+Migrating to Comments (20130610143128)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610143128')[0m
+  [1m[35m (106.4ms)[0m  commit transaction
+Migrating to AddLandlordIdToComments (20130610152919)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "comments" ADD "landlord_id" int
+SQLite3::SQLException: no such table: comments: ALTER TABLE "comments" ADD "landlord_id" int
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to Comments (20130610143128)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130610143128'[0m
+  [1m[35m (112.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:24:59 -0400
+Processing by LandlordsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'landlords'):
+  app/controllers/landlords_controller.rb:3:in `new'
+  app/controllers/landlords_controller.rb:3:in `new'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.5ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.2ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to Landlords (20130610142938)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130610142938'[0m
+  [1m[35m (112.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/search" for 127.0.0.1 at 2013-06-23 13:25:14 -0400
+Processing by StaticPagesController#search as HTML
+  Rendered static_pages/search.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:25:14 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:25:14 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:25:14 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:25:14 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:25:15 -0400
+Processing by LandlordsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::StatementInvalid (Could not find table 'landlords'):
+  app/models/landlord.rb:18:in `search'
+  app/controllers/landlords_controller.rb:8:in `index'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.5ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.3ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to Landlords (20130610142938)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130610142938')
+  [1m[36m (111.3ms)[0m  [1mcommit transaction[0m
+Migrating to Comments (20130610143128)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610143128')[0m
+  [1m[35m (93.2ms)[0m  commit transaction
+Migrating to AddLandlordIdToComments (20130610152919)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "comments" ADD "landlord_id" int
+SQLite3::SQLException: no such table: comments: ALTER TABLE "comments" ADD "landlord_id" int
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (125.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (94.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (94.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[35m (1.9ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to Landlords (20130610142938)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130610142938')
+  [1m[36m (168.2ms)[0m  [1mcommit transaction[0m
+Migrating to Comments (20130610143128)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130610143128')[0m
+  [1m[35m (93.3ms)[0m  commit transaction
+Migrating to AddLandlordIdToComments (20130610152919)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "comments" ADD "landlord_id" int
+SQLite3::SQLException: no such table: comments: ALTER TABLE "comments" ADD "landlord_id" int
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to Landlords (20130610142938)
+Migrating to Comments (20130610143128)
+Migrating to AddLandlordIdToComments (20130610152919)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to Landlords (20130610142938)
+Migrating to Comments (20130610143128)
+Migrating to AddLandlordIdToComments (20130610152919)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130610152919')
+  [1m[36m (117.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddIndexes (20130616182543)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130616182543')[0m
+  [1m[35m (93.4ms)[0m  commit transaction
+Migrating to AddTimeStampsToComment (20130616182727)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130616182727')
+  [1m[36m (90.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to Landlords (20130610142938)
+Migrating to Comments (20130610143128)
+Migrating to AddLandlordIdToComments (20130610152919)
+Migrating to AddIndexes (20130616182543)
+Migrating to AddTimeStampsToComment (20130616182727)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to Landlords (20130610142938)
+Migrating to Comments (20130610143128)
+Migrating to AddLandlordIdToComments (20130610152919)
+Migrating to AddIndexes (20130616182543)
+Migrating to AddTimeStampsToComment (20130616182727)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to Landlords (20130610142938)
+Migrating to Comments (20130610143128)
+Migrating to AddLandlordIdToComments (20130610152919)
+Migrating to AddIndexes (20130616182543)
+Migrating to AddTimeStampsToComment (20130616182727)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to Landlords (20130610142938)
+Migrating to Comments (20130610143128)
+Migrating to AddLandlordIdToComments (20130610152919)
+Migrating to AddIndexes (20130616182543)
+Migrating to AddTimeStampsToComment (20130616182727)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:29:29 -0400
+Processing by LandlordsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'landlords'):
+  app/models/landlord.rb:18:in `search'
+  app/controllers/landlords_controller.rb:8:in `index'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.4ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (116.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (97.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (97.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130616182727')[0m
+  [1m[35m (110.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130610152919')
+  [1m[36m (97.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130610143128')[0m
+  [1m[35m (98.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130610142938')
+  [1m[36m (97.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130616182543')[0m
+  [1m[35m (2.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to Landlords (20130610142938)
+Migrating to Comments (20130610143128)
+Migrating to AddLandlordIdToComments (20130610152919)
+Migrating to AddIndexes (20130616182543)
+Migrating to AddTimeStampsToComment (20130616182727)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:29:57 -0400
+Processing by LandlordsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'landlords'):
+  app/models/landlord.rb:18:in `search'
+  app/controllers/landlords_controller.rb:8:in `index'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.5ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.3ms)
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:30:00 -0400
+Processing by LandlordsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'landlords'):
+  app/models/landlord.rb:18:in `search'
+  app/controllers/landlords_controller.rb:8:in `index'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.5ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.2ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (165.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (97.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (96.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130616182727')[0m
+  [1m[35m (97.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130610152919')
+  [1m[36m (110.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130610143128')[0m
+  [1m[35m (97.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130610142938')
+  [1m[36m (97.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130616182543')[0m
+  [1m[35m (1.9ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (116.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (97.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.8ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to Landlords (1)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('1')
+  [1m[36m (93.1ms)[0m  [1mcommit transaction[0m
+Migrating to Comments (2)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('2')[0m
+  [1m[35m (108.4ms)[0m  commit transaction
+Migrating to AddLandlordIdToComments (3)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "comments" ADD "landlord_id" int
+SQLite3::SQLException: no such table: comments: ALTER TABLE "comments" ADD "landlord_id" int
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (119.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (97.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (96.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130616182727')[0m
+  [1m[35m (110.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('2')
+  [1m[36m (97.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('4')[0m
+  [1m[35m (98.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('1')
+  [1m[36m (97.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('5')[0m
+  [1m[35m (110.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('3')
+  [1m[36m (1.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (105.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (95.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.9ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to Landlords (1)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "landlords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "city" varchar(255), "province" varchar(255)) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('1')[0m
+  [1m[35m (102.4ms)[0m  commit transaction
+Migrating to Comments (2)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "comments" text, "terms" boolean, "ip" varchar(255)) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('2')[0m
+  [1m[35m (93.4ms)[0m  commit transaction
+Migrating to AddLandlordIdToComments (3)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "comments" ADD "landlord_id" int
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('3')[0m
+  [1m[35m (94.5ms)[0m  commit transaction
+Migrating to AddTimeStampsToComment (4)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "comments" ADD "created_at" datetime
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "comments" ADD "updated_at" datetime[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('4')
+  [1m[36m (92.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddIndexes (5)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_comments_on_landlord_id_and_created_at" ON "comments" ("landlord_id", "created_at")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('5')
+  [1m[36m (106.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:42:00 -0400
+Processing by LandlordsController#index as HTML
+  [1m[35mLandlord Load (0.1ms)[0m  SELECT "landlords".* FROM "landlords" ORDER BY landlords.name ASC, name
+  Rendered landlords/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:42:00 -0400
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:42:00 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:42:00 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:42:00 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:42:02 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.0ms)
+  Rendered landlords/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined method `comment' for #<Comment:0x007fbbf4229680>):
+    31: 	<%= f.label "Comment : ", class: "tos" ,class:'control-label' %>
+    32: 	<div class ="controls" >
+    33: 		<%= f.fields_for :comments do |comment_form| %>
+    34: 		<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
+    35: 		<%= f.label "Terms of Service", class: "tos underline" %>
+    36: 
+    37: 		<div class="terms ">
+  app/views/landlords/new.html.erb:34:in `block (2 levels) in _app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+  app/views/landlords/new.html.erb:33:in `block in _app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+  app/views/landlords/new.html.erb:6:in `_app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+Connecting to database specified by database.yml
+  [1m[36m (13.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (114.2ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "comments" text, "terms" boolean, "ip" varchar(255), "landlord_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (94.7ms)[0m  [1mCREATE INDEX "index_comments_on_landlord_id_and_created_at" ON "comments" ("landlord_id", "created_at")[0m
+  [1m[35m (148.6ms)[0m  CREATE TABLE "landlords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "city" varchar(255), "province" varchar(255)) 
+  [1m[36m (94.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (95.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (107.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('5')
+  [1m[36m (95.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('2')[0m
+  [1m[35m (95.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('4')
+  [1m[36m (95.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('1')[0m
+  [1m[35m (108.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('3')
+  [1m[36m (1.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to Landlords (1)
+Migrating to Comments (2)
+Migrating to AddLandlordIdToComments (3)
+Migrating to AddTimeStampsToComment (4)
+Migrating to AddIndexes (5)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:43:14 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.0ms)
+  Rendered landlords/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `comment' for #<Comment:0x007fbbe444d548>):
+    31: 	<%= f.label "Comment : ", class: "tos" ,class:'control-label' %>
+    32: 	<div class ="controls" >
+    33: 		<%= f.fields_for :comments do |comment_form| %>
+    34: 		<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
+    35: 		<%= f.label "Terms of Service", class: "tos underline" %>
+    36: 
+    37: 		<div class="terms ">
+  app/views/landlords/new.html.erb:34:in `block (2 levels) in _app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+  app/views/landlords/new.html.erb:33:in `block in _app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+  app/views/landlords/new.html.erb:6:in `_app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.4ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:43:16 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.0ms)
+  Rendered landlords/new.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `comment' for #<Comment:0x007fbbe43d2488>):
+    31: 	<%= f.label "Comment : ", class: "tos" ,class:'control-label' %>
+    32: 	<div class ="controls" >
+    33: 		<%= f.fields_for :comments do |comment_form| %>
+    34: 		<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
+    35: 		<%= f.label "Terms of Service", class: "tos underline" %>
+    36: 
+    37: 		<div class="terms ">
+  app/views/landlords/new.html.erb:34:in `block (2 levels) in _app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+  app/views/landlords/new.html.erb:33:in `block in _app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+  app/views/landlords/new.html.erb:6:in `_app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.4ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:43:16 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.1ms)
+  Rendered landlords/new.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `comment' for #<Comment:0x007fbbf413bf70>):
+    31: 	<%= f.label "Comment : ", class: "tos" ,class:'control-label' %>
+    32: 	<div class ="controls" >
+    33: 		<%= f.fields_for :comments do |comment_form| %>
+    34: 		<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
+    35: 		<%= f.label "Terms of Service", class: "tos underline" %>
+    36: 
+    37: 		<div class="terms ">
+  app/views/landlords/new.html.erb:34:in `block (2 levels) in _app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+  app/views/landlords/new.html.erb:33:in `block in _app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+  app/views/landlords/new.html.erb:6:in `_app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.5ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.3ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:43:16 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.0ms)
+  Rendered landlords/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `comment' for #<Comment:0x007fbbe8197110>):
+    31: 	<%= f.label "Comment : ", class: "tos" ,class:'control-label' %>
+    32: 	<div class ="controls" >
+    33: 		<%= f.fields_for :comments do |comment_form| %>
+    34: 		<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
+    35: 		<%= f.label "Terms of Service", class: "tos underline" %>
+    36: 
+    37: 		<div class="terms ">
+  app/views/landlords/new.html.erb:34:in `block (2 levels) in _app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+  app/views/landlords/new.html.erb:33:in `block in _app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+  app/views/landlords/new.html.erb:6:in `_app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.6ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:43:18 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.1ms)
+  Rendered landlords/new.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `comment' for #<Comment:0x007fbbe4431eb0>):
+    31: 	<%= f.label "Comment : ", class: "tos" ,class:'control-label' %>
+    32: 	<div class ="controls" >
+    33: 		<%= f.fields_for :comments do |comment_form| %>
+    34: 		<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
+    35: 		<%= f.label "Terms of Service", class: "tos underline" %>
+    36: 
+    37: 		<div class="terms ">
+  app/views/landlords/new.html.erb:34:in `block (2 levels) in _app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+  app/views/landlords/new.html.erb:33:in `block in _app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+  app/views/landlords/new.html.erb:6:in `_app_views_landlords_new_html_erb___2422737690269827846_70222615963380'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.5ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.4ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (114.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (94.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.9ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to Landlords (1)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "landlords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "city" varchar(255), "province" varchar(255)) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('1')[0m
+  [1m[35m (97.1ms)[0m  commit transaction
+Migrating to Comments (2)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "comment" text, "terms" boolean, "ip" varchar(255)) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('2')[0m
+  [1m[35m (104.7ms)[0m  commit transaction
+Migrating to AddLandlordIdToComments (3)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "comments" ADD "landlord_id" int
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('3')[0m
+  [1m[35m (92.7ms)[0m  commit transaction
+Migrating to AddTimeStampsToComment (4)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "comments" ADD "created_at" datetime
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "comments" ADD "updated_at" datetime[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('4')
+  [1m[36m (92.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddIndexes (5)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_comments_on_landlord_id_and_created_at" ON "comments" ("landlord_id", "created_at")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('5')
+  [1m[36m (94.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/home" for 127.0.0.1 at 2013-06-23 13:43:45 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:43:45 -0400
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:43:45 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:43:45 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:43:45 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:43:46 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.0ms)
+  Rendered landlords/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 9.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:43:46 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:43:46 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:43:46 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:43:46 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:43:52 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 1", "city"=>"test 1", "province"=>"test 1", "comments_attributes"=>{"0"=>{"comment"=>"test 1", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[36mLandlord Load (0.2ms)[0m  [1mSELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 1' AND "landlords"."city" = 'test 1' AND "landlords"."province" = 'test 1' ORDER BY landlords.name ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "landlords" ("city", "name", "province") VALUES (?, ?, ?)[0m  [["city", "test 1"], ["name", "test 1"], ["province", "test 1"]]
+  [1m[35m (129.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", nil], ["created_at", Sun, 23 Jun 2013 17:43:52 UTC +00:00], ["ip", nil], ["landlord_id", 1], ["terms", nil], ["updated_at", Sun, 23 Jun 2013 17:43:52 UTC +00:00]]
+  [1m[35m (98.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "comments" SET "ip" = '127.0.0.1', "updated_at" = '2013-06-23 17:43:52.746854' WHERE "comments"."id" = 1
+  [1m[36m (91.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/landlords
+Completed 302 Found in 335ms (ActiveRecord: 320.4ms)
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:43:52 -0400
+Processing by LandlordsController#index as HTML
+  [1m[35mLandlord Load (0.2ms)[0m  SELECT "landlords".* FROM "landlords" ORDER BY landlords.name ASC, name
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1[0m
+  Rendered landlords/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:43:52 -0400
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:43:52 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:43:52 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:43:52 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:43:55 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.0ms)
+  Rendered landlords/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:43:55 -0400
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:43:55 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:43:55 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:43:55 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:43:58 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 1", "city"=>"test 1", "province"=>"test 1", "comments_attributes"=>{"0"=>{"comment"=>"test 1", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[35mLandlord Load (0.3ms)[0m  SELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 1' AND "landlords"."city" = 'test 1' AND "landlords"."province" = 'test 1' ORDER BY landlords.name ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = 1 ORDER BY comments.created_at DESC
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/landlords
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:43:58 -0400
+Processing by LandlordsController#index as HTML
+  [1m[36mLandlord Load (0.2ms)[0m  [1mSELECT "landlords".* FROM "landlords" ORDER BY landlords.name ASC, name[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1
+  Rendered landlords/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:43:58 -0400
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:43:58 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:43:58 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:43:58 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:44:29 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.0ms)
+  Rendered landlords/new.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:44:29 -0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:44:29 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:44:29 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:44:29 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:44:39 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 1", "city"=>"test 1", "province"=>"test 1", "comments_attributes"=>{"0"=>{"comment"=>"q1RGEBDFZCVGF", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[36mLandlord Load (0.2ms)[0m  [1mSELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 1' AND "landlords"."city" = 'test 1' AND "landlords"."province" = 'test 1' ORDER BY landlords.name ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = 1 ORDER BY comments.created_at DESC[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/landlords
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:44:39 -0400
+Processing by LandlordsController#index as HTML
+  [1m[35mLandlord Load (0.1ms)[0m  SELECT "landlords".* FROM "landlords" ORDER BY landlords.name ASC, name
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1[0m
+  Rendered landlords/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:44:39 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:44:39 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:44:39 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:44:39 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/landlords/1" for 127.0.0.1 at 2013-06-23 13:44:40 -0400
+Processing by LandlordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLandlord Load (0.3ms)[0m  SELECT "landlords".* FROM "landlords" WHERE "landlords"."id" = ? ORDER BY landlords.name ASC LIMIT 1  [["id", "1"]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = 1 ORDER BY comments.created_at DESC[0m
+  Rendered landlords/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:44:40 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:44:40 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:44:40 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:44:40 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:44:42 -0400
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:44:42 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:44:42 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:44:42 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:48:31 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.1ms)
+  Rendered landlords/new.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:48:31 -0400
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:48:31 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:48:31 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:48:31 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:48:38 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 12", "city"=>"test 1", "province"=>"test 1", "comments_attributes"=>{"0"=>{"comment"=>"test 1", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[35mLandlord Load (0.2ms)[0m  SELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 12' AND "landlords"."city" = 'test 1' AND "landlords"."province" = 'test 1' ORDER BY landlords.name ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "landlords" ("city", "name", "province") VALUES (?, ?, ?)  [["city", "test 1"], ["name", "test 12"], ["province", "test 1"]]
+  [1m[36m (123.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 2
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", nil], ["created_at", Sun, 23 Jun 2013 17:48:39 UTC +00:00], ["ip", nil], ["landlord_id", 2], ["terms", nil], ["updated_at", Sun, 23 Jun 2013 17:48:39 UTC +00:00]]
+  [1m[36m (91.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mUPDATE "comments" SET "ip" = '127.0.0.1', "updated_at" = '2013-06-23 17:48:39.188029' WHERE "comments"."id" = 2[0m
+  [1m[35m (92.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/landlords
+Completed 302 Found in 319ms (ActiveRecord: 309.4ms)
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:48:39 -0400
+Processing by LandlordsController#index as HTML
+  [1m[36mLandlord Load (0.2ms)[0m  [1mSELECT "landlords".* FROM "landlords" ORDER BY landlords.name ASC, name[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 2[0m
+  Rendered landlords/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:48:39 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:48:39 -0400
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:48:39 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:48:39 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/landlords/1" for 127.0.0.1 at 2013-06-23 13:48:48 -0400
+Processing by LandlordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLandlord Load (0.1ms)[0m  SELECT "landlords".* FROM "landlords" WHERE "landlords"."id" = ? ORDER BY landlords.name ASC LIMIT 1  [["id", "1"]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = 1 ORDER BY comments.created_at DESC[0m
+  Rendered landlords/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:48:48 -0400
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:48:48 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:48:48 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:48:48 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:48:49 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:48:49 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:48:49 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:48:49 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/landlords/2" for 127.0.0.1 at 2013-06-23 13:48:50 -0400
+Processing by LandlordsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mLandlord Load (0.1ms)[0m  SELECT "landlords".* FROM "landlords" WHERE "landlords"."id" = ? ORDER BY landlords.name ASC LIMIT 1  [["id", "2"]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = 2 ORDER BY comments.created_at DESC[0m
+  Rendered landlords/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:48:50 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:48:50 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:48:50 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:48:50 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:48:51 -0400
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:48:51 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:48:51 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:48:51 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:50:20 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 12", "city"=>"test 1", "province"=>"test 1", "comments_attributes"=>{"0"=>{"comment"=>"test 1", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[35mLandlord Load (0.1ms)[0m  SELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 12' AND "landlords"."city" = 'test 1' AND "landlords"."province" = 'test 1' ORDER BY landlords.name ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 2[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = 2 ORDER BY comments.created_at DESC
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/landlords
+Completed 302 Found in 29ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:50:20 -0400
+Processing by LandlordsController#index as HTML
+  [1m[36mLandlord Load (0.2ms)[0m  [1mSELECT "landlords".* FROM "landlords" ORDER BY landlords.name ASC, name[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 2[0m
+  Rendered landlords/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:50:20 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:50:20 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:50:20 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:50:20 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/landlords/1" for 127.0.0.1 at 2013-06-23 13:50:23 -0400
+Processing by LandlordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLandlord Load (0.3ms)[0m  SELECT "landlords".* FROM "landlords" WHERE "landlords"."id" = ? ORDER BY landlords.name ASC LIMIT 1  [["id", "1"]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = 1 ORDER BY comments.created_at DESC[0m
+  Rendered landlords/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:50:23 -0400
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:50:23 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:50:23 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:50:23 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:50:26 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.0ms)
+  Rendered landlords/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:50:26 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:50:26 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:50:26 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:50:26 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:50:32 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 1", "city"=>"test 1", "province"=>"test 1", "comments_attributes"=>{"0"=>{"comment"=>"test 1", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[35mLandlord Load (0.2ms)[0m  SELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 1' AND "landlords"."city" = 'test 1' AND "landlords"."province" = 'test 1' ORDER BY landlords.name ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = 1 ORDER BY comments.created_at DESC
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/landlords
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:50:32 -0400
+Processing by LandlordsController#index as HTML
+  [1m[36mLandlord Load (0.2ms)[0m  [1mSELECT "landlords".* FROM "landlords" ORDER BY landlords.name ASC, name[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 2[0m
+  Rendered landlords/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:50:32 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:50:32 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:50:32 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:50:32 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2013-06-23 13:52:27 -0400
+Processing by StaticPagesController#search as HTML
+  Rendered static_pages/search.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:52:27 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:52:27 -0400
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:52:27 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:52:27 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2013-06-23 13:52:28 -0400
+Processing by StaticPagesController#search as HTML
+  Rendered static_pages/search.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:52:28 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:52:28 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:52:28 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:52:28 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:52:28 -0400
+
+SyntaxError (/home/devon/Development/Lousylandlord/app/controllers/landlords_controller.rb:18: syntax error, unexpected '}', expecting ')'
+...andlord][:comments_attributes]}) if @landlord.comments.empty...
+...                               ^):
+  activesupport (3.2.13) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.13) lib/active_support/inflector/methods.rb:229:in `constantize'
+  activesupport (3.2.13) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__2350369834956856569__call__1487569584860327011__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/devon/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/devon/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/devon/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.6ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:52:36 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.0ms)
+  Rendered landlords/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 9.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:52:36 -0400
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:52:36 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:52:36 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:52:36 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:52:42 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 1", "city"=>"test 1", "province"=>"test 1", "comments_attributes"=>{"0"=>{"comment"=>"qfdscxz ", "terms"=>"0"}}}, "commit"=>"Submit"}
+  [1m[35mLandlord Load (0.3ms)[0m  SELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 1' AND "landlords"."city" = 'test 1' AND "landlords"."province" = 'test 1' ORDER BY landlords.name ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = 1 ORDER BY comments.created_at DESC
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/landlords
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:52:42 -0400
+Processing by LandlordsController#index as HTML
+  [1m[36mLandlord Load (0.2ms)[0m  [1mSELECT "landlords".* FROM "landlords" ORDER BY landlords.name ASC, name[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 2[0m
+  Rendered landlords/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:52:42 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:52:42 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:52:42 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:52:42 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:52:53 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.0ms)
+  Rendered landlords/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 9.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:52:53 -0400
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:52:53 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:52:53 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:52:53 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:52:59 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 1", "city"=>"test 1", "province"=>"test 1", "comments_attributes"=>{"0"=>{"comment"=>"qwera", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[35mLandlord Load (0.2ms)[0m  SELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 1' AND "landlords"."city" = 'test 1' AND "landlords"."province" = 'test 1' ORDER BY landlords.name ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = 1 ORDER BY comments.created_at DESC
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/landlords
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:52:59 -0400
+Processing by LandlordsController#index as HTML
+  [1m[36mLandlord Load (0.4ms)[0m  [1mSELECT "landlords".* FROM "landlords" ORDER BY landlords.name ASC, name[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 2[0m
+  Rendered landlords/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:52:59 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:52:59 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:52:59 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:52:59 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:53:03 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.0ms)
+  Rendered landlords/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:53:03 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:53:03 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:53:03 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:53:03 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:53:08 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 1", "city"=>"test 1", "province"=>"test 1", "comments_attributes"=>{"0"=>{"comment"=>"test 1", "terms"=>"0"}}}, "commit"=>"Submit"}
+  [1m[35mLandlord Load (0.3ms)[0m  SELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 1' AND "landlords"."city" = 'test 1' AND "landlords"."province" = 'test 1' ORDER BY landlords.name ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = 1 ORDER BY comments.created_at DESC
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/landlords
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/landlords" for 127.0.0.1 at 2013-06-23 13:53:08 -0400
+Processing by LandlordsController#index as HTML
+  [1m[36mLandlord Load (0.2ms)[0m  [1mSELECT "landlords".* FROM "landlords" ORDER BY landlords.name ASC, name[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 2[0m
+  Rendered landlords/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:53:08 -0400
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:53:08 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:53:08 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:53:08 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:53:35 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.0ms)
+  Rendered landlords/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 8.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:53:35 -0400
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:53:35 -0400
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:53:35 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:53:35 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:53:41 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 2asdasd", "city"=>"asdasd", "province"=>"asdasd", "comments_attributes"=>{"0"=>{"comment"=>"asdasd", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[35mLandlord Load (0.3ms)[0m  SELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 2asdasd' AND "landlords"."city" = 'asdasd' AND "landlords"."province" = 'asdasd' ORDER BY landlords.name ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "landlords" ("city", "name", "province") VALUES (?, ?, ?)  [["city", "asdasd"], ["name", "test 2asdasd"], ["province", "asdasd"]]
+  [1m[36m (132.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 3
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 141ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: 0):
+  app/controllers/landlords_controller.rb:18:in `create'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:53:49 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 2asdasd", "city"=>"asdasd", "province"=>"asdasd", "comments_attributes"=>{"0"=>{"comment"=>"asdasd", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[36mLandlord Load (0.1ms)[0m  [1mSELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 2asdasd' AND "landlords"."city" = 'asdasd' AND "landlords"."province" = 'asdasd' ORDER BY landlords.name ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 3
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 24ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: 0):
+  app/controllers/landlords_controller.rb:18:in `create'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.3ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:53:56 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 2asdasd", "city"=>"asdasd", "province"=>"asdasd", "comments_attributes"=>{"0"=>{"comment"=>"asdasd", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[36mLandlord Load (0.1ms)[0m  [1mSELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 2asdasd' AND "landlords"."city" = 'asdasd' AND "landlords"."province" = 'asdasd' ORDER BY landlords.name ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 3
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 7ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: 0):
+  app/controllers/landlords_controller.rb:18:in `create'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.4ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:53:59 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 2asdasd", "city"=>"asdasd", "province"=>"asdasd", "comments_attributes"=>{"0"=>{"comment"=>"asdasd", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[36mLandlord Load (0.3ms)[0m  [1mSELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 2asdasd' AND "landlords"."city" = 'asdasd' AND "landlords"."province" = 'asdasd' ORDER BY landlords.name ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 3
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 4ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: 0):
+  app/controllers/landlords_controller.rb:18:in `create'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.5ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:54:01 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 2asdasd", "city"=>"asdasd", "province"=>"asdasd", "comments_attributes"=>{"0"=>{"comment"=>"asdasd", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[36mLandlord Load (0.3ms)[0m  [1mSELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 2asdasd' AND "landlords"."city" = 'asdasd' AND "landlords"."province" = 'asdasd' ORDER BY landlords.name ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 3
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 4ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: 0):
+  app/controllers/landlords_controller.rb:18:in `create'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.4ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:54:02 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 2asdasd", "city"=>"asdasd", "province"=>"asdasd", "comments_attributes"=>{"0"=>{"comment"=>"asdasd", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[36mLandlord Load (0.3ms)[0m  [1mSELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 2asdasd' AND "landlords"."city" = 'asdasd' AND "landlords"."province" = 'asdasd' ORDER BY landlords.name ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 3
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 4ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: 0):
+  app/controllers/landlords_controller.rb:18:in `create'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.9ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.4ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:54:06 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 2asdasd", "city"=>"asdasd", "province"=>"asdasd", "comments_attributes"=>{"0"=>{"comment"=>"asdasd", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[36mLandlord Load (0.1ms)[0m  [1mSELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 2asdasd' AND "landlords"."city" = 'asdasd' AND "landlords"."province" = 'asdasd' ORDER BY landlords.name ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 3
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 7ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: 0):
+  app/controllers/landlords_controller.rb:18:in `create'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.3ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:54:18 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 2asdasd", "city"=>"asdasd", "province"=>"asdasd", "comments_attributes"=>{"0"=>{"comment"=>"asdasd", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[36mLandlord Load (0.1ms)[0m  [1mSELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 2asdasd' AND "landlords"."city" = 'asdasd' AND "landlords"."province" = 'asdasd' ORDER BY landlords.name ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 3
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 8ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: 0):
+  app/controllers/landlords_controller.rb:18:in `create'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.6ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:54:41 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"test 2asdasd", "city"=>"asdasd", "province"=>"asdasd", "comments_attributes"=>{"0"=>{"comment"=>"asdasd", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[36mLandlord Load (0.1ms)[0m  [1mSELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'test 2asdasd' AND "landlords"."city" = 'asdasd' AND "landlords"."province" = 'asdasd' ORDER BY landlords.name ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 3
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-23 13:54:41 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:54:41 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:54:41 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:54:41 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:54:41 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:54:50 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.1ms)
+  Rendered landlords/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:54:50 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:54:50 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:54:50 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:54:50 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:54:54 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"qweqwe", "city"=>"qweqwe", "province"=>"qweqwe", "comments_attributes"=>{"0"=>{"comment"=>"qweqweqwe", "terms"=>"0"}}}, "commit"=>"Submit"}
+  [1m[36mLandlord Load (0.2ms)[0m  [1mSELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = 'qweqwe' AND "landlords"."city" = 'qweqwe' AND "landlords"."province" = 'qweqwe' ORDER BY landlords.name ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "landlords" ("city", "name", "province") VALUES (?, ?, ?)[0m  [["city", "qweqwe"], ["name", "qweqwe"], ["province", "qweqwe"]]
+  [1m[35m (148.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 4[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 156ms (ActiveRecord: 149.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-23 13:54:54 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:54:54 -0400
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:54:54 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:54:54 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:54:54 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/submit" for 127.0.0.1 at 2013-06-23 13:55:01 -0400
+Processing by LandlordsController#new as HTML
+  Rendered shared/_error_message.html.erb (0.0ms)
+  Rendered landlords/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 37ms (Views: 26.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 13:55:01 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-06-23 13:55:01 -0400
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-23 13:55:01 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-23 13:55:01 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:55:03 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"", "city"=>"", "province"=>"", "comments_attributes"=>{"0"=>{"comment"=>"", "terms"=>"0"}}}, "commit"=>"Submit"}
+  [1m[35mLandlord Load (0.3ms)[0m  SELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = '' AND "landlords"."city" = '' AND "landlords"."province" = '' ORDER BY landlords.name ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 8ms
+
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank, Name is too short (minimum is 2 characters), City can't be blank, Province can't be blank):
+  app/controllers/landlords_controller.rb:17:in `create'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:55:24 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"", "city"=>"", "province"=>"", "comments_attributes"=>{"0"=>{"comment"=>"", "terms"=>"0"}}}, "commit"=>"Submit"}
+  [1m[36mLandlord Load (0.1ms)[0m  [1mSELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = '' AND "landlords"."city" = '' AND "landlords"."province" = '' ORDER BY landlords.name ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 422 Unprocessable Entity in 7ms
+
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank, Name is too short (minimum is 2 characters), City can't be blank, Province can't be blank):
+  app/controllers/landlords_controller.rb:17:in `create'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.8ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:55:39 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"123123", "city"=>"123123123", "province"=>"13123", "comments_attributes"=>{"0"=>{"comment"=>"123123", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[35mLandlord Load (0.3ms)[0m  SELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = '123123' AND "landlords"."city" = '123123123' AND "landlords"."province" = '13123' ORDER BY landlords.name ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "landlords" ("city", "name", "province") VALUES (?, ?, ?)  [["city", "123123123"], ["name", "123123"], ["province", "13123"]]
+  [1m[36m (124.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 5
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 165ms
+
+ActionView::MissingTemplate (Missing template landlords/create, application/create with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/home/devon/Development/Lousylandlord/app/views"
+):
+  actionpack (3.2.13) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.13) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.13) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.13) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.13) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.13) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.13) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /home/devon/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.13) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:414:in `_run__2739206906178783510__process_action__960278212008470327__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:35:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__2350369834956856569__call__1487569584860327011__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/devon/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/devon/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/devon/.rvm/rubies/ruby-1.9.3-p429/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.3ms)
+
+
+Started POST "/landlords" for 127.0.0.1 at 2013-06-23 13:56:07 -0400
+Processing by LandlordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHmmk0IHZ61tgcIQqnYlA2hYLUtSrM7WteiCUC+olpQ=", "landlord"=>{"name"=>"123123", "city"=>"123123123", "province"=>"13123", "comments_attributes"=>{"0"=>{"comment"=>"123123", "terms"=>"1"}}}, "commit"=>"Submit"}
+  [1m[36mLandlord Load (0.1ms)[0m  [1mSELECT "landlords".* FROM "landlords" WHERE "landlords"."name" = '123123' AND "landlords"."city" = '123123123' AND "landlords"."province" = '13123' ORDER BY landlords.name ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = 5
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 15ms
+
+NameError (undefined local variable or method `submit' for #<LandlordsController:0x007fbbe8154400>):
+  app/controllers/landlords_controller.rb:25:in `create'
+
+
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/devon/.rvm/gems/ruby-1.9.3-p429/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.9ms)
