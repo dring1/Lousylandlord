@@ -3,7 +3,7 @@
 <span> <%=	@landlord.city %> </span>
 <span> <%=	@landlord.province %> </span>
 
-
+<br>
 <% @landlord.comments.each do |f| %>
-	<p> <%=   f.comment %> </p>
+	<p> <%=   f.comment %> </p> <br>
 <% end %>
