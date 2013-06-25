@@ -21389,3 +21389,30 @@ Served asset /jquery.js - 304 Not Modified (1ms)
 
 Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-06-23 18:20:36 -0400
 Served asset /bootstrap.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to Landlords (1)
+Migrating to Comments (2)
+Migrating to AddLandlordIdToComments (3)
+Migrating to AddTimeStampsToComment (4)
+Migrating to AddIndexes (5)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (193.4ms)[0m  DROP TABLE "comments"
+  [1m[36m (198.2ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "comment" text, "terms" boolean, "ip" varchar(255), "landlord_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (142.8ms)[0m  CREATE INDEX "index_comments_on_landlord_id_and_created_at" ON "comments" ("landlord_id", "created_at")
+  [1m[36m (142.0ms)[0m  [1mDROP TABLE "landlords"[0m
+  [1m[35m (165.4ms)[0m  CREATE TABLE "landlords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "city" varchar(255), "province" varchar(255)) 
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.7ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to Landlords (1)
+Migrating to Comments (2)
+Migrating to AddLandlordIdToComments (3)
+Migrating to AddTimeStampsToComment (4)
+Migrating to AddIndexes (5)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
