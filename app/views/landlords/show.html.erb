@@ -1,9 +1,11 @@
 
-<span> <%=	@landlord.name %> </span>
-<span> <%=	@landlord.city %> </span>
-<span> <%=	@landlord.province %> </span>
-
+<span id="name"> <%=	@landlord.name %> </span>
+<span id="city"> <%=	@landlord.city %> </span>
+<span id="province"> <%=	@landlord.province %> </span>
+<span id="comment_total"> <%= "Total comments #{@landlord.comments.count} " %> </span>
 <br>
 <% @landlord.comments.each do |f| %>
+	#if f < 300 chars enable show more option
+	#
 	<p> <%=   f.comment %> </p> <br>
 <% end %>
