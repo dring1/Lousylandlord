@@ -1,9 +1,9 @@
 require "spec_helper"
 
 describe Landlord do
-	before do
-		@landlord = Landlord.new(name: "Omar Hashem", city: "Rar", province: "Quebexico")
-	end	
+	before {@landlord = Landlord.new(name: "Omar Hashem", city: "Rar", province: "Quebexico")}
+		
+	
 
 	subject {@landlord}
 	it {should respond_to(:name)}
@@ -29,7 +29,12 @@ describe Landlord do
 	#check if the name, city and province are the same, if so 
 	#only add a comment to not create a new landlord
 	describe "when creating a landlord that already exists" do
-		let(:landlord_2) { FactoryGirl.build(:landlord) }
+		before { @landlord.save }
+		#let(:landlord_2) { FactoryGirl.build(:landlord) }
+		#before {landlord_2.save}
+	
+		#it {@landlord.comments.should == 2 }
+
 		
 	end
 	describe "comment associations" do
