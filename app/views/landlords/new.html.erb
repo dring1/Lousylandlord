@@ -1,7 +1,7 @@
 <h1>Submit a Landlord</h1>
 
 
-
+<%= render '/shared/error_messages' %>
 
 <%= form_for @landlord, {:html => { :class => "form-horizontal" }} do |f| %>
 
@@ -30,6 +30,7 @@
 
 	<%= f.label "Comment : ", class: "tos" ,class:'control-label' %>
 	<div class ="controls" >
+		<% @landlord.comments.build unless @landlord.comments.any? %>
 		<%= f.fields_for :comments do |comment_form| %>
 		<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
 		<%= f.label "Terms of Service", class: "tos underline" %>
