@@ -19,28 +19,40 @@ class LandlordsController < ApplicationController
      :province => params[:landlord][:province]). 
     first_or_create
     if @landlord.valid?
-      @landlord.comments.build
-      @landlord.comments.last.setIP request.remote_ip
-      @landlord.comments.last.comment = params[:landlord][:comments_attributes]["0"][:comment]
-      @landlord.comments.last.terms = params[:landlord][:comments_attributes]["0"][:terms]
+      #refactor this shit
+        # if validComment? params[:landlord][:comments_attributes]["0"][:comment]  && 
+        #   params[:landlord][:comments_attributes]["0"][:terms]
+          @landlord.comments.build      
+          @landlord.comments.last.setIP request.remote_ip
+          @landlord.comments.last.comment = params[:landlord][:comments_attributes]["0"][:comment]
+          @landlord.comments.last.terms = params[:landlord][:comments_attributes]["0"][:terms]
+        # end
     end
     if @landlord.save  
-      flash[:success] = "Thank you for bmitting a Landlord "
+      flash[:success] = "Thank you for submitting a Landlord "
       redirect_to @landlord
     else
-       #flash[:fail] = "Form not filled correctly #{@landlord.errors.count}"
-       #@landlord.comments.build
-       render landlords_new_path
-
+       render :new
     end
    end
 
 
 
-   def update
-   end
+  #  def update
+  #   @landlord = Landlord.find(params[:id])
+  #   if @user.update_attributes(params[:user])
+  #   else
+  #     flash[:notice] = "Creation fail"
+  #     render :new
+  #   end
+  # end
 
-   def destroy
-   end
+  def destroy
+  end
 
- end
+  def validComment? comment
+    (comment.length < 15 || comment.length > 500) ? false : true
+  end
+
+end
+ 
