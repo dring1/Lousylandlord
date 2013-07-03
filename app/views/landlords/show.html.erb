@@ -1,12 +1,9 @@
-
 <div class="row">
 	<aside class="span4">
 		<section>
 			<h1>
 				<%= @landlord.name %>
 			</h1>
-
-
 		</section>
 		<section>
 			<h3>
@@ -18,4 +15,10 @@
 		</div>
 	</aside>
 
+</div>
+<div>
+	<% @landlord.comments.each do |f| %>
+	<br>
+	<%= content_tag :span, f.comment %> 			
+	<% end	%>
 </div>

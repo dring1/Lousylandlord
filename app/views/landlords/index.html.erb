@@ -8,8 +8,8 @@
 <th>User Comment</th>
 <th>See profile</th>
 
+<%= will_paginate %>
   <% @landlords.each do |l| %>
-
     <tr >     
       <td class='user-list'>
       	<%= content_tag(:p, l.name,  :data => {:name => l.name }) %> 
@@ -22,5 +22,7 @@
       </td>
     </tr>
   <% end %>
+<%= will_paginate %>
 </table>
+
 <%= link_to 'Submit a Landlord', submit_path %> 
