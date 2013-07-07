@@ -1,6 +1,5 @@
 
 
-
 /* universal */
 
 html {
@@ -86,7 +85,7 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin-top: 20%;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #999;
@@ -217,3 +216,25 @@ margin: 0 0 18px 0;
 @extend .control-group;
 @extend .error;
 }
+
+.sidebar{
+  position: fixed;
+  overflow: auto;
+  float: left;
+  border-left: 1px solid #AD9EA3;
+  padding-left: 3px;
+}
+
+.comment-section{
+  float: right;
+  display: block;
+  width: 40%;
+  .comment-text{
+
+    word-wrap: break-word;
+    margin-bottom: 10px;
+
+  }
+}
+
+

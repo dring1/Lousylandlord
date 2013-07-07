@@ -33,7 +33,7 @@
 		<% @landlord.comments.build unless @landlord.comments.any? %>
 		<%= f.fields_for :comments do |comment_form| %>
 		<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
-		<%= f.label "Terms of Service", class: "tos underline" %>
+		<%= f.label "Terms of Service", class: "tos underline center" %>
 
 		<div class="terms ">
 			<p class= "terms-closed " >"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -58,12 +58,13 @@
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deseru </p>
 
-
+		
 			<div class='tos-wrapper '>		
 				<%= f.label "Agree to our terms of sevice", class:'tos-check'%> 
 				<%= comment_form.check_box :terms %>
 
 			</div>
+
 			<% end %>
 		</div>
 	</div>

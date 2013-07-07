@@ -1,6 +1,6 @@
 class Landlord < ActiveRecord::Base
     attr_accessible  :name, :city, :province, :comments_attributes
-    has_many :comments, dependent: :destroy, :autosave => true
+    has_many :comments, dependent: :destroy
     accepts_nested_attributes_for :comments
 
     validates :name, presence: true, 
@@ -18,6 +18,6 @@ class Landlord < ActiveRecord::Base
 			find(:all)
 		end
 	end
-
+    self.per_page = 10
     default_scope order: 'landlords.name ASC'
 end

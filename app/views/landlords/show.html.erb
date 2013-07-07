@@ -1,24 +1,20 @@
-<div class="row">
-	<aside class="span4">
-		<section>
-			<h1>
-				<%= @landlord.name %>
-			</h1>
-		</section>
-		<section>
-			<h3>
-				<%= @landlord.city %>, <%= @landlord.province %>
-			</h3>
-		</section>
-		<div class="span4">
-			<%= @landlord.comments.count %>
-		</div>
-	</aside>
 
-</div>
-<div>
-	<% @landlord.comments.each do |f| %>
-	<br>
-	<%= content_tag :span, f.comment %> 			
-	<% end	%>
-</div>
+<section>
+	<div class= "sidebar">	
+		<h1> <%= @landlord.name %> </h1>
+		<h3> <%= @landlord.city %>  ,</h3>
+		<h3> <%=	@landlord.province %> </h3>
+		<span>Total comments : <%= @landlord.comments.count %> </span> 
+	</div>
+
+
+	<div class = "comment-section" >
+		<% if @landlord.comments.any? %>
+			<% @landlord.comments.each do |f| %>
+			<%= content_tag :p, f.comment , class:'comment-text ' %> 			
+			<% end %>
+		<% else %>
+			<%= content_tag :strong, "No comments" , class:'comment-text ' %> 			
+		<% end %>
+	</div>
+</section>
