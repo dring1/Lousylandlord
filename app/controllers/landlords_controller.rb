@@ -1,11 +1,11 @@
 class LandlordsController < ApplicationController
   def new
   	@landlord = Landlord.new
-    @landlord.comments.build
+    @landlord.comments.builds
   end
 
   def index
-    @landlords = Landlord.paginate(page: params[:landlord]).order(:name).search(params[:search])
+    @landlords = Landlord.paginate(page: params[:page]).search(params[:search])
   end
 
   def show  	
