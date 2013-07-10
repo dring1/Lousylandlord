@@ -7,7 +7,6 @@
 <th>Landlord's Name</th>
 <th>User Comment</th>
 <th>See profile</th>
-
   <% @landlords.each do |l| %>
     <tr >     
       <td class='user-list'>
@@ -24,5 +23,6 @@
 
 </table>
 
+<%= will_paginate %>
 
 <%= link_to 'Submit a Landlord', submit_path %> 
