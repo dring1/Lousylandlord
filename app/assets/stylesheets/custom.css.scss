@@ -121,6 +121,10 @@ footer ul li {
 
 
 /* jQuery magic */
+.terms-contents{
+  margin-right: 22%;
+  text-align: center;
+}
 
 .tos-display, .search-display{
   text-decoration: underline;
@@ -179,6 +183,8 @@ footer ul li {
   margin-top: 5%;
   .tos-check{
     display: inline;
+    padding-top: 10px;
+    
   }
 }
 /* For search form */

@@ -1,11 +1,11 @@
 class LandlordsController < ApplicationController
   def new
   	@landlord = Landlord.new
-    @landlord.comments.builds
+    @landlord.comments.build
   end
 
   def index
-    @landlords = Landlord.paginate(page: params[:page]).search(params[:search])
+    @landlords = Landlord.paginate(page: params[:landlord]).order(:name).search(params[:search])
   end
 
   def show  	
@@ -50,9 +50,7 @@ class LandlordsController < ApplicationController
   def destroy
   end
 
-  def validComment? comment
-    (comment.length < 15 || comment.length > 500) ? false : true
-  end
+
 
 end
  
