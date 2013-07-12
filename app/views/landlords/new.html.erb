@@ -15,15 +15,18 @@
 	</div>
 </div>
 <div class ="control-group">
-	<%= f.label "Landlord's city : " , class:'control-label '%>
+	<%= f.label "Landlord's province : " , class:'control-label '%>
 	<div class="controls">
-		<%= f.text_field :city , class:'frm-exp' %>
+		<!-- <%= f.text_field :province , class:'frm-exp' %> -->
+		<%= f.select :province, [[],'Alberta','British Colombia', 'Manitoba','New Brunswick',
+			'Newfoundland and Labrador', 'Northwest Territories', 'Nova Scotia', 'Nunavut', 'Ontario','Prince Edward Island', 'Quebec', 'Saskatchewan', 'Yukon'], class:'province-select' %>
 	</div>
 </div>
 <div class ="control-group">
-	<%= f.label "Landlord's province : " , class:'control-label '%>
+	<%= f.label "Landlord's city : " , class:'control-label '%>
 	<div class="controls">
-		<%= f.text_field :province , class:'frm-exp' %>
+		<!-- <%= f.text_field :city , class:'frm-exp' %> -->
+		<%= f.select :city, [], class:'city-select' %>
 	</div>
 </div>
 <div class="control-group ">
