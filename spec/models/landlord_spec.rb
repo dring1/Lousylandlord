@@ -1,7 +1,9 @@
 require "spec_helper"
 
 describe Landlord do
-	before {@landlord = Landlord.new(name: "Omar Hashem", city: "Rar", province: "Quebexico")}
+	before {@landlord = Landlord.new(name: "Omar Hashem")}
+	before {@city = City.new(name: "Ottawa")}
+	before {@province = Province.new(name: "Ontario")}
 		
 	
 

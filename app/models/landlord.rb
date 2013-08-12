@@ -1,6 +1,8 @@
 class Landlord < ActiveRecord::Base
     attr_accessible  :name, :city, :province, :comments_attributes
     has_many :comments, dependent: :destroy
+    belongs_to :province
+    belongs_to :city
     accepts_nested_attributes_for :comments
 
     validates :name, presence: true, 
