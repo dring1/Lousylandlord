@@ -1,12 +1,11 @@
 FactoryGirl.define do
-	factory :landlord do
-		name "Sir Swaggle Bottom"
-		city "Ottawa"
-		province "Ontario"
+	factory :landlord, class: Landlord do
+		name "Sir Swaggle Bottom Fist"
+		
 	end
 
-	factory :comment do
-		comment "PewPew"
+	factory :comment, class: Comment do
+		comment "PewPewPewPewPewPewPewPewPewPew"
 		terms	true
 		ip		"127.0.0.1"
 	end

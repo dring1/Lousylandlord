@@ -8,7 +8,7 @@ class Landlord < ActiveRecord::Base
     validates :name, presence: true, 
     				length: {minimum: 2, maximum: 50}
 
-  
+
 
     
    	
@@ -19,6 +19,7 @@ class Landlord < ActiveRecord::Base
 			find(:all)
 		end
 	end
+
     self.per_page = 10
     default_scope order: 'landlords.name ASC'
 end
