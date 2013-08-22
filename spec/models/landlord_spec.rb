@@ -1,17 +1,22 @@
 require "spec_helper"
 
 describe Landlord do
-	before {@landlord = Landlord.new(name: "Omar Hashem")}
-	before {@city = City.new(name: "Ottawa")}
-	before {@province = Province.new(name: "Ontario")}
-		
+	@l = Landlord.new(name: "test 1")
+	#before {@city = City.first}
+#before {@province = @c.province}
 	
+	@l.save
+	@l.city = City.first
+	@l.province = Province.first
 
-	subject {@landlord}
-	it {should respond_to(:name)}
-	it {should respond_to(:city)}
-	it {should respond_to(:province)}
-	it {should respond_to(:comments)}
+	#@l.save
+	subject {@l}
+
+	# it {should respond_to(:name)}
+	# it {should respond_to(:city)}
+	# it {should respond_to(:province)}
+	# it {should respond_to(:comments)}
+
 
 	it  {should be_valid}
 
