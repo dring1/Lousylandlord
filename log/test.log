@@ -675,3 +675,113 @@ Connecting to database specified by database.yml
   [1m[36mProvince Load (0.1ms)[0m  [1mSELECT "provinces".* FROM "provinces" LIMIT 1[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (23.2ms)[0m  INSERT INTO "landlords" ("city_id", "created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["city_id", nil], ["created_at", Thu, 22 Aug 2013 02:18:17 UTC +00:00], ["name", "test 1"], ["province_id", nil], ["updated_at", Thu, 22 Aug 2013 02:18:17 UTC +00:00]]
+  [1m[36m (22.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT "cities".* FROM "cities" LIMIT 1
+  [1m[36mProvince Load (0.1ms)[0m  [1mSELECT "provinces".* FROM "provinces" LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (21.4ms)[0m  INSERT INTO "landlords" ("city_id", "created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["city_id", nil], ["created_at", Thu, 22 Aug 2013 02:18:35 UTC +00:00], ["name", "test 1"], ["province_id", nil], ["updated_at", Thu, 22 Aug 2013 02:18:35 UTC +00:00]]
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mCity Load (0.1ms)[0m  SELECT "cities".* FROM "cities" LIMIT 1
+  [1m[36mProvince Load (0.1ms)[0m  [1mSELECT "provinces".* FROM "provinces" LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36mCity Load (1.1ms)[0m  [1mSELECT "cities".* FROM "cities" LIMIT 1[0m
+  [1m[35mProvince Load (0.1ms)[0m  SELECT "provinces".* FROM "provinces" LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36mCity Load (1.1ms)[0m  [1mSELECT "cities".* FROM "cities" LIMIT 1[0m
+Connecting to database specified by database.yml
+  [1m[36mCity Load (18.0ms)[0m  [1mSELECT "cities".* FROM "cities" LIMIT 1[0m
+  [1m[35mProvince Load (0.1ms)[0m  SELECT "provinces".* FROM "provinces" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36mCity Load (17.8ms)[0m  [1mSELECT "cities".* FROM "cities" LIMIT 1[0m
+  [1m[35mProvince Load (0.1ms)[0m  SELECT "provinces".* FROM "provinces" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36mCity Load (18.4ms)[0m  [1mSELECT "cities".* FROM "cities" LIMIT 1[0m
+  [1m[35mProvince Load (0.1ms)[0m  SELECT "provinces".* FROM "provinces" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36mCity Load (1.1ms)[0m  [1mSELECT "cities".* FROM "cities" LIMIT 1[0m
+  [1m[35mProvince Load (0.1ms)[0m  SELECT "provinces".* FROM "provinces" LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36mCity Load (1.1ms)[0m  [1mSELECT "cities".* FROM "cities" LIMIT 1[0m
+  [1m[35mProvince Load (0.1ms)[0m  SELECT "provinces".* FROM "provinces" LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36mCity Load (1.1ms)[0m  [1mSELECT "cities".* FROM "cities" LIMIT 1[0m
+  [1m[35mProvince Load (0.1ms)[0m  SELECT "provinces".* FROM "provinces" LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction

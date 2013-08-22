@@ -1,30 +1,29 @@
 require "spec_helper"
 
 describe Landlord do
-	@l = Landlord.new(name: "test 1")
-	#before {@city = City.first}
-#before {@province = @c.province}
+	l = Landlord.new(name: "test 1")
+		
 	
-	@l.save
-	@l.city = City.first
-	@l.province = Province.first
+	l.city = City.first
+	l.province = Province.first
 
-	#@l.save
-	subject {@l}
+	
+	subject {l}
 
-	# it {should respond_to(:name)}
-	# it {should respond_to(:city)}
-	# it {should respond_to(:province)}
-	# it {should respond_to(:comments)}
+	it {should respond_to(:name)}
+	it {should respond_to(:city)}
+	it {should respond_to(:province)}
+	it {should respond_to(:comments)}
 
 
 	it  {should be_valid}
 
-	# describe "when name is not present" do
-	# 	before { @landlord.name = " " }
-	# 	it {should_not be_valid}
-	# end
-	# describe "when city is not present" do
+	describe "when name is not present" do
+	 	before { l.name = " " }
+	 	it {should_not be_valid}
+	end
+
+	#describe "when city is not present" do
 	# 	before { @landlord.city = " " }
 	# 	it {should_not be_valid}
 	# end
@@ -37,9 +36,9 @@ describe Landlord do
 	# #only add a comment to not create a new landlord
 	# describe "when creating a landlord that already exists" do
 	# 	before { @landlord.save }
-	# 	#let(:landlord_2) { FactoryGirl.build(:landlord) }
-	# 	#before {landlord_2.save}
-	
+	# 	let(:landlord_2) { FactoryGirl.build(:landlord) }
+	# 	before {landlord_2.save}
+	# end
 	# 	#it {@landlord.comments.should == 2 }
 
 		
