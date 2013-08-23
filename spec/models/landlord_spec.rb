@@ -54,6 +54,15 @@ describe Landlord do
 				Comment.find_by_id(comment.id).should be_nil				
 			end			
 		end
+
+		it "should have 100 comments" do
+			@landlord.comments.destroy_all
+
+			(0...100).each do |n|
+				FactoryGirl.create(:comment, landlord: @landlord)
+			end
+			@landlord.comments.count.should == 100
+		end
 		
 	 end
 
