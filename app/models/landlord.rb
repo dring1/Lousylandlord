@@ -1,5 +1,6 @@
 class Landlord < ActiveRecord::Base
-    attr_accessible  :name, :comments_attributes
+    attr_accessible  :name, :comments_attributes, :city_id, :province_id
+
     has_many :comments, dependent: :destroy
     belongs_to :province
     belongs_to :city
@@ -7,6 +8,8 @@ class Landlord < ActiveRecord::Base
 
     validates :name, presence: true, 
     				length: {minimum: 2, maximum: 50}
+    validates :city_id, presence: true
+    validates :province_id, presence: true
 
 
 

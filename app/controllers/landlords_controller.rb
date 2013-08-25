@@ -14,10 +14,10 @@ class LandlordsController < ApplicationController
 
   def create  	
     #check if a landlord of the same name already exists and add comments to that
-    @landlord = Landlord.where(:name => params[:landlord][:name], \
-     :city => params[:landlord][:city], \
-     :province => params[:landlord][:province]). 
-    first_or_create
+     @landlord = Landlord.where(:name => params[:landlord][:name], \
+      :city_id => params[:landlord][:city_id], \
+      :province_id => params[:landlord][:province_id]). 
+     first_or_create
     if @landlord.valid?
       #refactor this shit
         # if validComment? params[:landlord][:comments_attributes]["0"][:comment]  && 
