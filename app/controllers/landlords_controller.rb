@@ -1,7 +1,7 @@
 class LandlordsController < ApplicationController
   def new
   	@landlord = Landlord.new
-    @landlord.comments.build
+    #@landlord.comments.build
   end
 
   def index
@@ -18,22 +18,22 @@ class LandlordsController < ApplicationController
       :city_id => params[:landlord][:city_id], \
       :province_id => params[:landlord][:province_id]). 
      first_or_create
-    if @landlord.valid?
-      #refactor this shit
-        # if validComment? params[:landlord][:comments_attributes]["0"][:comment]  && 
-        #   params[:landlord][:comments_attributes]["0"][:terms]
-          @landlord.comments.build      
-          @landlord.comments.last.setIP request.remote_ip
-          @landlord.comments.last.comment = params[:landlord][:comments_attributes]["0"][:comment]
-          @landlord.comments.last.terms = params[:landlord][:comments_attributes]["0"][:terms]
-        # end
-    end
-    if @landlord.save  
+    #landlord.valid?
+    # if @landlord.valid?
+    #       @landlord.comments.build      
+    #       @landlord.comments.last.setIP request.remote_ip
+    #       @landlord.comments.last.comment = params[:landlord][:comments_attributes]["0"][:comment]
+    #       @landlord.comments.last.terms = params[:landlord][:comments_attributes]["0"][:terms]
+    # end       
+    if @landlord.save 
       flash[:success] = "Thank you for submitting a Landlord "
       redirect_to @landlord
     else
        render :new
+  
     end
+   
+    
    end
 
 

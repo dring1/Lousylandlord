@@ -3,7 +3,9 @@ LousyLandLord::Application.routes.draw do
 
   get "landlords/new"
 
-  resources :landlords
+  resources :landlords do 
+    resources :comments
+  end
 
 
   root :to =>  'static_pages#home'
