@@ -57,7 +57,9 @@ describe Landlord do
 		
 	 end
 
-
+	 describe "comment validity" do 
+	 	
+	 end
 
 	
 end
