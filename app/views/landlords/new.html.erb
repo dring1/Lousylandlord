@@ -15,26 +15,25 @@
 	</div>
 </div>
 <div class ="control-group">
-	<%= f.label "Landlord's province : " , class:'control-label '%>
-	<div class="controls">
-		<!-- <%= f.text_field :province , class:'frm-exp' %> 
-		<%= f.select :province, [[],'Alberta','British Colombia', 'Manitoba','New Brunswick',
-			'Newfoundland and Labrador', 'Northwest Territories', 'Nova Scotia', 'Nunavut', 'Ontario','Prince Edward Island', 'Quebec', 'Saskatchewan', 'Yukon'], class:'province-select' %> -->
-			<%=	f.grouped_collection_select :province_id, Province.order(:name), :provinces, :name, :id, :name,  include_blank: true %>
-	</div>
+	
+	
+			<div class="controls">
+	
+				<%= f.label :province_id %>
+
+			<%= f.collection_select :province_id, Province.order(:name), :id, :name, include_blank: true %>		
+			</div>
+<div class="controls">
+			<%= f.label :city_id %>
+
+			<%= f.grouped_collection_select :city_id, Province.order(:name), :cities, :name,  :id, :name, include_blank: true %>	
+			</div>
 </div>
-<div class ="control-group">
-	<%= f.label "Landlord's city : " , class:'control-label '%>
-	<div class="controls">
-		<!-- <%= f.text_field :city , class:'frm-exp' %> -->
-		<%= f.select :city, [], class:'city-select' %>
-	</div>
-</div>
-<div class="control-group ">
+
+<!-- <div class="control-group ">
 
 	<%= f.label "Comment : ", class: "tos" ,class:'control-label' %>
 	<div class ="controls" >
-		<% @landlord.comments.build unless @landlord.comments.any? %>
 		<%= f.fields_for :comments do |comment_form| %>
 		<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
 		<div class="terms-contents">
@@ -76,7 +75,7 @@
 		</div>
 
 
-	</div>
+	</div> -->
 	<div class="center submit">
 		<%= f.submit "Submit", class: " btn btn-large btn-primary" %>
 	</div>

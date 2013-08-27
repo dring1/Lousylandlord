@@ -2,13 +2,15 @@ require "spec_helper"
 
 describe Landlord do
 	before do
-		# l.city = City.first
-		# l.province = Province.first	
 		@landlord = Landlord.new(name: "test 1")
-		@landlord.city = City.first
-		@landlord.province = Province.first
+		city = City.new(name: "pewtown")
+		province = Province.new(name: "Pewington")
+		@landlord.city = city
+		@landlord.province = province
+		p @landlord.city
+		p @landlord.province
 	end
-		
+
 	subject {@landlord}
 
 	it {should respond_to(:name)}
@@ -19,21 +21,13 @@ describe Landlord do
 
 	it  {should be_valid}
 
+
 	describe "when name is not present" do
-	 	before { @landlord.name = " " }
-	 	it {should_not be_valid}
+		before { @landlord.name = " " }
+		it {should_not be_valid}
 	end
 
-	# describe "when city is not present" do
-	# 	before { @landlord.city = nil }
-	# 	it {should_not be_valid}
-	# end
-	# describe "when province is not present" do
-	# 	before { @landlord.province = nil }
-	# 	it {should_not be_valid}
-	# end
-
-	 it  {should be_valid}
+	it  {should be_valid}
 
 	describe "comment associations" do
 		before { @landlord.save }
@@ -54,8 +48,17 @@ describe Landlord do
 				Comment.find_by_id(comment.id).should be_nil				
 			end			
 		end
+
+		it "should have 100 comments" do
+			@landlord.comments.destroy_all
+
+			(0...100).each do |n|
+				FactoryGirl.create(:comment, landlord: @landlord)
+			end
+			@landlord.comments.count.should == 100
+		end
 		
-	 end
+	end
 
 	 describe "comment validity" do 
 	 	

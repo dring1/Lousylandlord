@@ -2,10 +2,17 @@
 <section>
 	<div class= "sidebar">	
 		<h1 class="name"> <%= @landlord.name %> </h1>
-		<h3> <%= @landlord.city %>  ,</h3>
-		<h3> <%=	@landlord.province %> </h3>
+		<h3> <%= @landlord.city.name %>  ,</h3>
+		<h3> <%=	@landlord.province.name %> </h3>
 		<span>Total comments : <%= @landlord.comments.count %> </span> 
 	</div>
+
+	<%= form_for @landlord do |f| %>
+		<%= f.fields_for :comments do |comment_form| %>
+		<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
+		<%= comment_form.submit "Submit", class:"btn btn-primary" %>
+		<% end -%>
+	<% end -%>
 
 
 	<div class = "comment-section" >
