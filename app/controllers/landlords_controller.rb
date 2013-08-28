@@ -1,7 +1,7 @@
 class LandlordsController < ApplicationController
   def new
   	@landlord = Landlord.new
-    @comment = Comment.build
+   # @comment = Comment.build
   end
 
   def index

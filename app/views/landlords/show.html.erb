@@ -1,22 +1,29 @@
 <%= render '/shared/error_messages' %>
-<section>
-	<div class= "sidebar">	
-		<h1 class="name"> <%= @landlord.name %> </h1>
-		<h3> <%= @landlord.city.name %>  ,</h3>
-		<h3> <%=	@landlord.province.name %> </h3>
-		<span>Total comments : <%= @landlord.comments.count %> </span> 
+<div >
+	<div class= "">	
+		
+			<h1 > <%= @landlord.name %> </h1>
+			<h3> <%= @landlord.city.name %>  ,</h3>
+			<h3> <%=	@landlord.province.name %> </h3>
+			<span>Total comments : <%= @landlord.comments.count %> </span> 
+			
+		<div class="comment-form">
+			<%= form_for @landlord do |f| %>
+				<%= f.fields_for @comment do |comment_form| %>
+				<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
+				
+				<% end -%>
+				<div>
+					<%= f.submit "Submit", class:"btn btn-primary" %>
+				</div>	
+			<% end -%>
+		</div>	
 	</div>
 
-	<%= form_for @landlord do |f| %>
-		<%= f.fields_for @comment do |comment_form| %>
-		<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
-		
-		<% end -%>
-		<%= f.submit "Submit", class:"btn btn-primary" %>
-	<% end -%>
+</div>	
 
 
-	<div class = "comment-section" >
+	<!-- <div class = "comment-section" >
 		<% if @landlord.comments.any? %>
 			<% @landlord.comments.each do |f| %>
 				<% if f.valid? %> 
@@ -26,5 +33,4 @@
 		<% else %>
 			<%= content_tag :strong, "No comments" , class:'comment-text ' %> 			
 		<% end %>
-	</div>
-</section>
+	</div> -->
