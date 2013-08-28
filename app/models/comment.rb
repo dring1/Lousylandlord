@@ -4,7 +4,7 @@ class Comment < ActiveRecord::Base
 
 	validates :landlord_id, presence: true
 	validates :ip, presence: true
-	validates :terms, presence: true
+	#validates :terms, presence: true
     validates :comment, presence: true, 
 				length: {minimum: 15, maximum: 500}		
 
