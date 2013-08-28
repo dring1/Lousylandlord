@@ -1,4 +1,4 @@
-
+<%= render '/shared/error_messages' %>
 <section>
 	<div class= "sidebar">	
 		<h1 class="name"> <%= @landlord.name %> </h1>
@@ -8,17 +8,20 @@
 	</div>
 
 	<%= form_for @landlord do |f| %>
-		<%= f.fields_for :comments do |comment_form| %>
+		<%= f.fields_for @comment do |comment_form| %>
 		<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
-		<%= comment_form.submit "Submit", class:"btn btn-primary" %>
+		
 		<% end -%>
+		<%= f.submit "Submit", class:"btn btn-primary" %>
 	<% end -%>
 
 
 	<div class = "comment-section" >
 		<% if @landlord.comments.any? %>
 			<% @landlord.comments.each do |f| %>
-			<%= content_tag :p, f.comment , class:'comment-text ' %> 			
+				<% if f.valid? %> 
+					<%= content_tag :p, f.comment , class:'comment-text ' %> 			
+				<% end -%>
 			<% end %>
 		<% else %>
 			<%= content_tag :strong, "No comments" , class:'comment-text ' %> 			

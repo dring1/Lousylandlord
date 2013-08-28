@@ -1,7 +1,7 @@
 class LandlordsController < ApplicationController
   def new
   	@landlord = Landlord.new
-    #@landlord.comments.build
+    @comment = Comment.build
   end
 
   def index
@@ -10,6 +10,7 @@ class LandlordsController < ApplicationController
 
   def show  	
     @landlord = Landlord.find(params[:id])
+    @comment  = Comment.new
   end
 
   def create  	
@@ -18,15 +19,8 @@ class LandlordsController < ApplicationController
       :city_id => params[:landlord][:city_id], \
       :province_id => params[:landlord][:province_id]). 
      first_or_create
-    #landlord.valid?
-    # if @landlord.valid?
-    #       @landlord.comments.build      
-    #       @landlord.comments.last.setIP request.remote_ip
-    #       @landlord.comments.last.comment = params[:landlord][:comments_attributes]["0"][:comment]
-    #       @landlord.comments.last.terms = params[:landlord][:comments_attributes]["0"][:terms]
-    # end       
     if @landlord.save 
-      flash[:success] = "Thank you for submitting a Landlord "
+      flash[:success] = "Thank you for submitting a Landlord " 
       redirect_to @landlord
     else
        render :new
@@ -38,14 +32,22 @@ class LandlordsController < ApplicationController
 
 
 
-  #  def update
-  #   @landlord = Landlord.find(params[:id])
-  #   if @user.update_attributes(params[:user])
-  #   else
-  #     flash[:notice] = "Creation fail"
-  #     render :new
-  #   end
-  # end
+   def update
+    
+    @landlord = Landlord.find(params[:id])
+    @comment = Comment.new
+    if @landlord.comments.build(params[:landlord][:comment]) 
+      @landlord.comments.last.setIP request.remote_ip
+    end
+    if @landlord.update_attributes(params[:user])
+        flash[:success] = params[:landlord] 
+        redirect_to @landlord
+    else
+
+      render :show
+
+    end
+  end
 
   def destroy
   end
