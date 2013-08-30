@@ -1,6 +1,6 @@
 <%= render '/shared/error_messages' %>
 <div >
-	<div class= "">	
+	<div class= "show-left">	
 		
 			<h1 > <%= @landlord.name %> </h1>
 			<h3> <%= @landlord.city.name %>  ,</h3>
@@ -19,11 +19,7 @@
 			<% end -%>
 		</div>	
 	</div>
-
-</div>	
-
-
-	<!-- <div class = "comment-section" >
+		<div class = "comment-section" >
 		<% if @landlord.comments.any? %>
 			<% @landlord.comments.each do |f| %>
 				<% if f.valid? %> 
@@ -33,4 +29,8 @@
 		<% else %>
 			<%= content_tag :strong, "No comments" , class:'comment-text ' %> 			
 		<% end %>
-	</div> -->
+	</div> 
+
+</div>	
+
+
