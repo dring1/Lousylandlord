@@ -7,24 +7,24 @@
 			<h3> <%=	@landlord.province.name %> </h3>
 			<span>Total comments : <%= @landlord.comments.count %> </span> 
 			
-		<div class="comment-form">
+		
 			<%= form_for @landlord do |f| %>
 				<%= f.fields_for @comment do |comment_form| %>
 				<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
 				
-				<% end -%>
+				<% end %>
 				<div>
 					<%= f.submit "Submit", class:"btn btn-primary" %>
 				</div>	
-			<% end -%>
-		</div>	
+			<% end %>
+			
 	</div>
-		<div class = "comment-section" >
+	<div class = "comment-section" >
 		<% if @landlord.comments.any? %>
 			<% @landlord.comments.each do |f| %>
 				<% if f.valid? %> 
 					<%= content_tag :p, f.comment , class:'comment-text ' %> 			
-				<% end -%>
+				<% end %>
 			<% end %>
 		<% else %>
 			<%= content_tag :strong, "No comments" , class:'comment-text ' %> 			

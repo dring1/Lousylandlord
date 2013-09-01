@@ -25,14 +25,17 @@ textarea {
   margin-bottom: 10px;
 }
 
+
 a{
   &:hover{
     color: black;
   }
 }
 
+
 .container{
-  
+  width: 1000px;
+  margin: 0 auto;
 }
 
 /* typography */
@@ -223,32 +226,19 @@ margin: 0 0 18px 0;
 @extend .error;
 }
 
-.sidebar{
-  //position: fixed;
-  //overflow: auto;
-  float: left;
-  border-left: 1px solid #AD9EA3;
-  padding-left: 3px;
-}
+
+
 
 .comment-section{
   float: right;
-  //display: block;
   width: 400px;
-  .comment-text{
-
-    //word-wrap: break-word;
+  /*.comment-text{
     margin-bottom: 10px;
 
-  }
+  }*/
 }
 
-
-.comment-form{
-  display: block;
-  width: 500px;
-
-}
-.content{
-  //margin-bottom: 10%;
+.show-left{
+  width: 400px;
+  float: left
 }
