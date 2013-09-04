@@ -34,7 +34,7 @@ a{
 
 
 .container{
-  width: 1000px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -88,7 +88,10 @@ p {
 /* footer */
 
 footer {
-  margin-top: 100px;
+  margin: 0 auto;
+  width: 80%;
+  position: relative;
+  margin-top: 20px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #999;
@@ -231,14 +234,16 @@ margin: 0 0 18px 0;
 
 .comment-section{
   float: right;
-  width: 400px;
-  /*.comment-text{
+  width: 50%;
+  .comment-text{
     margin-bottom: 10px;
+    word-wrap: break-word;
+    border-bottom: 2px solid #eaeaea;
 
-  }*/
+  }
 }
 
 .show-left{
-  width: 400px;
+  width: 50%;
   float: left
 }
