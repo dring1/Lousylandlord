@@ -1,5 +1,4 @@
 class Landlord < ActiveRecord::Base
-    attr_accessible  :name,:city_id, :province_id, :comments_attributes
 
     has_many :comments, dependent: :destroy
     belongs_to :province
@@ -25,5 +24,5 @@ class Landlord < ActiveRecord::Base
 	end
 
     self.per_page = 10
-    default_scope order: 'landlords.name ASC'
+    #default_scope order: 'landlords.name ASC'
 end
