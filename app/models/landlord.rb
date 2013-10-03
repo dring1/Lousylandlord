@@ -1,15 +1,18 @@
 class Landlord < ActiveRecord::Base
 
     has_many :comments, dependent: :destroy
+    has_many :addresses, dependent: :destroy
+
     belongs_to :province
     belongs_to :city
 
-    accepts_nested_attributes_for :comments
+    accepts_nested_attributes_for :comments, :addresses
 
     validates :name, presence: true, 
     				length: {minimum: 2, maximum: 50}
-    # validates :city_id, presence: true
-    # validates :province_id, presence: true
+
+    validates :city_id, presence: true
+    validates :province_id, presence: true
 
 
 
@@ -27,5 +30,5 @@ class Landlord < ActiveRecord::Base
    
     #default_scope order: 'landlords.name ASC'
     
-    default_scope order('landlords.name ASC')
+    default_scope {order('landlords.name ASC')}
 end

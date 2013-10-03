@@ -9,18 +9,29 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130914040523) do
+ActiveRecord::Schema.define(version: 20131003223208) do
 
-  create_table "cities", :force => true do |t|
-    t.string   "name"
-    t.integer  "province_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+  create_table "addresses", force: true do |t|
+    t.string   "number"
+    t.string   "street"
+    t.string   "unit"
+    t.string   "postal"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "city_id"
+    t.integer  "landlord_id"
   end
 
-  create_table "comments", :force => true do |t|
+  create_table "cities", force: true do |t|
+    t.string   "name"
+    t.integer  "province_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "comments", force: true do |t|
     t.text     "comment"
     t.boolean  "terms"
     t.string   "ip"
@@ -29,26 +40,27 @@ ActiveRecord::Schema.define(:version => 20130914040523) do
     t.datetime "updated_at"
   end
 
-  add_index "comments", ["landlord_id", "created_at"], :name => "index_comments_on_landlord_id_and_created_at"
+  add_index "comments", ["landlord_id", "created_at"], name: "index_comments_on_landlord_id_and_created_at"
 
-  create_table "landlords", :force => true do |t|
+  create_table "landlords", force: true do |t|
     t.string   "name"
     t.integer  "city_id"
     t.integer  "province_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "address_id"
   end
 
-  create_table "provinces", :force => true do |t|
+  create_table "provinces", force: true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "users", :force => true do |t|
+  create_table "users", force: true do |t|
     t.string   "email"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.string   "password_digest"
   end
 

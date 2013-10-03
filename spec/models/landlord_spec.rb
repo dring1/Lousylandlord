@@ -2,9 +2,15 @@ require "spec_helper"
 
 describe Landlord do
 	before do
-		
-		@landlord = Landlord.new(name: "test 1")
-
+		@c = City.new(name: "test town")
+		p = Province.new(name: "test province")
+		p.save
+		@c.province = p
+		@c.save
+		a = Address.new(street:"Fake St.", unit:"2", postal:"555555",
+					city: @ˇc)
+		a.save
+		@landlord = Landlord.new(name: "pew", city: @c, province: p)
 	end
 
 	subject {@landlord}
@@ -61,5 +67,10 @@ describe Landlord do
 	 # 	l.city = 
 	 # end
 
-	
+	describe "add address to landlord" do
+	  it "should allow addition of address" do
+	    @landlord.addresses.build(street:"Fake St.", unit:"2", postal:"555555", city: @c)
+	    @landlord.should be_valid
+	  end
+	end
 end

@@ -17,68 +17,37 @@
 <div class ="control-group">
 	
 	
-			<div class="controls">
-	
-				<%= f.label :province_id %>
+	<div class="controls">
 
-			<%= f.collection_select :province_id, Province.order(:name), :id, :name, include_blank: true %>		
-			</div>
-<div class="controls">
-			<%= f.label :city_id %>
+		<%= f.label :province_id %>
 
-			<%= f.grouped_collection_select :city_id, Province.order(:name), :cities, :name,  :id, :name, include_blank: true %>	
-			</div>
+		<%= f.collection_select :province_id, Province.order(:name), :id, :name, include_blank: true %>		
+	</div>
+	<div class="controls">
+		<%= f.label :city_id %>
+
+		<%= f.grouped_collection_select :city_id, Province.order(:name), :cities, :name,  :id, :name, include_blank: true %>	
+	</div>
 </div>
 
-<!-- <div class="control-group ">
+<div>
+	<%= f.fields_for :address do  |address_form| %>
+		
+		<%= address_form.label :number %>
+		<%= address_form.text_field :number %>
+		<%= address_form.label :street %>
+		<%= address_form.text_field :street %>
+		<%= address_form.label "#{:unit}# / Apt #" %>
+		<%= address_form.text_field :unit %>
+		<%= address_form.label :postal %>
+		<%= address_form.text_field :postal %>
 
-	<%= f.label "Comment : ", class: "tos" ,class:'control-label' %>
-	<div class ="controls" >
-		<%= f.fields_for :comments do |comment_form| %>
-		<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
-		<div class="terms-contents">
-			<%= f.label "Terms of Service", class: "tos underline" %>
-
-			<div class="terms ">
-				<p class= "terms-closed " >"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deseruLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deseruLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deseruLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deseru </p>
-
-
-					<div class='tos-wrapper '>		
-						<%= f.label "Agree to our terms of sevice", class:'tos-check'%> 
-						<%= comment_form.check_box :terms %>
-
-					</div>
-				</div>
-
-				<% end %>
-			</div>
-		</div>-->
-
-
-	</div> 
-	<div class="center submit">
-		<%= f.submit "Submit", class: " btn btn-large btn-primary" %>
-	</div>
 	<% end %>
+</div>
+
+<div class="center submit">
+	<%= f.submit "Submit", class: " btn btn-large btn-primary" %>
+</div>
+<% end %>
 
 
