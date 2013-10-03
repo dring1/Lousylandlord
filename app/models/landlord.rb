@@ -26,5 +26,6 @@ class Landlord < ActiveRecord::Base
     self.per_page = 10
    
     #default_scope order: 'landlords.name ASC'
+    
     default_scope order('landlords.name ASC')
 end
