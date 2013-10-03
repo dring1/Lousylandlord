@@ -15,5 +15,6 @@ class Comment < ActiveRecord::Base
 		self.ip = var
 	end
 
-	#default_scope order: 'comments.created_at DESC'
+	#default_scope order: 'comments.created_at DESC
+	default_scope order 'comments.created_at DESC'
 end

@@ -2,13 +2,9 @@ require "spec_helper"
 
 describe Landlord do
 	before do
+		
 		@landlord = Landlord.new(name: "test 1")
-		city = City.new(name: "pewtown")
-		province = Province.new(name: "Pewington")
-		@landlord.city = city
-		@landlord.province = province
-		p @landlord.city
-		p @landlord.province
+
 	end
 
 	subject {@landlord}
@@ -60,9 +56,10 @@ describe Landlord do
 		
 	end
 
-	 describe "comment validity" do 
-	 	
-	 end
+	 # describe "Increase landlord count" do 
+	 # 	l = Landlord.new(name: "Test 2")
+	 # 	l.city = 
+	 # end
 
 	
 end
