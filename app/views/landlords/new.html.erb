@@ -29,7 +29,7 @@
 		<%= f.grouped_collection_select :city_id, Province.order(:name), :cities, :name,  :id, :name, include_blank: true %>	
 	</div>
 </div>
-
+<!-- insert address -->
 <div>
 	<%= f.fields_for :address do  |address_form| %>
 		

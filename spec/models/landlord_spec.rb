@@ -69,8 +69,12 @@ describe Landlord do
 
 	describe "add address to landlord" do
 	  it "should allow addition of address" do
-	    @landlord.addresses.build(street:"Fake St.", unit:"2", postal:"555555", city: @c)
+	    @address = @landlord.addresses.new(number:"123", street:"Fake St.", unit:"2", postal:"555555", city: @c)
 	    @landlord.should be_valid
+	    @landlord.save
+	    p @landlord
+	    @address.save
+	    p @address
 	  end
 	end
 end

@@ -14,8 +14,6 @@ class Landlord < ActiveRecord::Base
     validates :city_id, presence: true
     validates :province_id, presence: true
 
-
-
     
    	
 	def self.search(search)
@@ -27,8 +25,6 @@ class Landlord < ActiveRecord::Base
 	end
 
     self.per_page = 10
-   
-    #default_scope order: 'landlords.name ASC'
     
     default_scope {order('landlords.name ASC')}
 end
