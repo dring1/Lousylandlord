@@ -23,9 +23,7 @@ class LandlordsController < ApplicationController
       adr_params = other_params[:address]
       address_params = {landlord_id: @landlord.id, city_id: @landlord.city.id, unit: adr_params[:unit], 
                         number: adr_params[:number], street: adr_params[:street], postal: adr_params[:postal]}
-      @a = @landlord.addresses.build(address_params)
-    
-
+      @a = @landlord.addresses.find_or_initialize_by(address_params) ## EDIT THIS LINE TO CHECK IF ADR ALREADY EXISTS
       flash[:success] = " #{@a.save}.... #{@a.attributes}.. #{address_params} " #"Thank you for submitting a Landlord " 
       redirect_to @landlord
     else
