@@ -9,7 +9,7 @@ class LandlordsController < ApplicationController
 
   def show  	
     @landlord = Landlord.find(params[:id])
-    @comment  = Comment.new
+    @comment = @landlord.comments.build
   end
 
   def create  	
@@ -24,7 +24,8 @@ class LandlordsController < ApplicationController
       address_params = {landlord_id: @landlord.id, city_id: @landlord.city.id, unit: adr_params[:unit], 
                         number: adr_params[:number], street: adr_params[:street], postal: adr_params[:postal]}
       @a = @landlord.addresses.find_or_initialize_by(address_params) ## EDIT THIS LINE TO CHECK IF ADR ALREADY EXISTS
-      flash[:success] = " #{@a.save}.... #{@a.attributes}.. #{address_params} " #"Thank you for submitting a Landlord " 
+      @a.save
+      flash[:success] = "Thank you for submitting a Landlord " 
       redirect_to @landlord
     else
        render :new
@@ -37,21 +38,29 @@ class LandlordsController < ApplicationController
    def update
     
     @landlord = Landlord.find(params[:id])
-    @comment = Comment.new
-    if @landlord.comments.build(params[:landlord][:comment]) 
-      @landlord.comments.last.setIP request.remote_ip
-    end
-    if @landlord.update_attributes(params[:user])
-        flash[:success] = params[:landlord] 
-        redirect_to @landlord
-    else
+    
 
+    @c = create_comment(params[:landlord]) unless params[:landlord][:comment][:comment].size < 15
+   
+    if @landlord.update_attributes(params[:landlord].permit(:landlord_attribute))
+      flash[:success] = "Thank you for submitting a comment"
+      redirect_to @landlord
+    else
+      flash[:fail] = "#{params} .... #{@c.attributes}"
       render :show
 
     end
   end
 
   def destroy
+  end
+
+  def create_comment(options)
+    @comment = @landlord.comments.build
+    
+    @comment.assign_attributes(options[:comment].permit(:landlord_attribute))
+    @landlord.comments.last.setIP request.remote_ip
+    @comment
   end
 
 
