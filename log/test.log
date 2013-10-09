@@ -20073,3 +20073,652 @@ Binary data inserted for `string` type on column `password_digest`
   [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
   [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (13.8ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (15.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$04$/ekQKnsVk4axYbWTi3yvZe96hFVAN.Ff7RLrKLc.NJJMBLBZ/9cfS"], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36m (1.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$04$1RMWqDBTCXfgz1mHPzfnQO4zoS0cWOP/dlpZ8yUKC43VBnVnGOM1W"], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (1.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$04$gi76XYoqvnljvbzU2xk5TewhPl7cf.ZtALRm89rC.uTry174xsgca"], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = ' ' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'USER@EXAMPLE.COM' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$04$xgjf6A.4QxyRE1PMKgLKmOH6vswQSFs/pbxiKO7MkLdB3A4aRY7ja"], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "landlords" ("city_id", "created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["city_id", 1], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["name", "pew"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Mon, 07 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 22:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = ? ORDER BY comments.created_at DESC[0m  [["landlord_id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:58 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."landlord_id" = ?  [["landlord_id", 1]]
+  [1m[36m (1.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "landlords" ("city_id", "created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["city_id", 1], ["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "pew"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Mon, 07 Oct 2013 23:12:59 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 22:12:59 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = ? ORDER BY comments.created_at DESC  [["landlord_id", 1]]
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "landlords" ("city_id", "created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["city_id", 1], ["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "pew"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Mon, 07 Oct 2013 23:12:59 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "ip", "landlord_id", "terms", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["comment", "PewPewPewPewPewPewPewPewPewPew"], ["created_at", Tue, 08 Oct 2013 22:12:59 UTC +00:00], ["ip", "127.0.0.1"], ["landlord_id", 1], ["terms", true], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."landlord_id" = ? ORDER BY comments.created_at DESC[0m  [["landlord_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 2]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 1]]
+  [1m[35mAddress Load (0.1ms)[0m  SELECT "addresses".* FROM "addresses" WHERE "addresses"."landlord_id" = ?  [["landlord_id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "landlords" WHERE "landlords"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  Rendered users/_form.html.erb (61.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (2.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "test province"], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Tue, 08 Oct 2013 23:12:59 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsersController#new as HTML
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
