@@ -9,6 +9,7 @@ LousyLandLord::Application.routes.draw do
     resources :comments
   end
   resources :sessions
+  resources :users
 
   root :to =>  'static_pages#home'
 
