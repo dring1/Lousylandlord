@@ -18,5 +18,4 @@ LousyLandLord::Application.routes.draw do
   get '/tos', to: 'static_pages#TermsOfService'
   get '/contact', to: 'static_pages#contact'
   get '/about', to: 'static_pages#about'
-  
 end

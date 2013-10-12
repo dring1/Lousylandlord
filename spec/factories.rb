@@ -1,5 +1,8 @@
 FactoryGirl.define do
 	factory :landlord, class: Landlord do
+		province_id 1
+		city_id 1
+		name "Derptacos"
 		
 	end
 

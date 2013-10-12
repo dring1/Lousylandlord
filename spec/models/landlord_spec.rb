@@ -8,7 +8,7 @@ describe Landlord do
 		@c.province = p
 		@c.save
 		a = Address.new(street:"Fake St.", unit:"2", postal:"555555",
-					city: @ˇc)
+					city_id: 1)
 		a.save
 		@landlord = Landlord.new(name: "pew", city: @c, province: p)
 	end
