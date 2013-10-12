@@ -1,5 +1,7 @@
 FactoryGirl.define do
-
+	factory :landlord, class: Landlord do
+		
+	end
 
 	factory :comment, class: Comment do
 		comment "PewPewPewPewPewPewPewPewPewPew"

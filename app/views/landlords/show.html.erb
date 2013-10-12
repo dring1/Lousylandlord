@@ -18,7 +18,7 @@
 			<h3> <%= @landlord.province.name %> </h3>
 			<% if @landlord.addresses.any? %>
 				<%  @landlord.addresses.each do |f| %>
-					<%= content_tag	:p, "#{f.attributes}" %>
+					<%= content_tag	:p, "#{f.number} #{f.street}  Apt/Unit: #{f.unit}"  %>
 				<% end %>
 
 			<% end %>
