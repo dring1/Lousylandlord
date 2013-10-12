@@ -20,4 +20,5 @@ LousyLandLord::Application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   get '/about', to: 'static_pages#about'
   get '/signin', to: 'sessions#new'
+  get '/signout', to: 'sessions#destroy'
 end

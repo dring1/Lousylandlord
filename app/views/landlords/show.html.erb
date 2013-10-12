@@ -18,9 +18,11 @@
 			<h3> <%= @landlord.province.name %> </h3>
 			<% if @landlord.addresses.any? %>
 				<%  @landlord.addresses.each do |f| %>
-					<%= content_tag	:p, "#{f.attributes}" %>
+					<%= content_tag	:p, "#{f.attributes}" %> 
+					<% if signed_in? %>
+        				<td><%= link_to 'Delete', root_url %></td>
+      				<% end %>
 				<% end %>
-
 			<% end %>
 			<span>Total comments : <%= @landlord.comments.count %> </span> 
 			
