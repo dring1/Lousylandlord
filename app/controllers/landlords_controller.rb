@@ -38,27 +38,25 @@ class LandlordsController < ApplicationController
    def update
     
     @landlord = Landlord.find(params[:id])
-    
-
-    @c = create_comment(params[:landlord]) unless params[:landlord][:comment][:comment].size < 15
+    @c = create_comment unless params[:landlord][:comment][:comment].size < 15
    
     if @landlord.update_attributes(params[:landlord].permit(:landlord_attribute))
       flash[:success] = "Thank you for submitting a comment"
       redirect_to @landlord
     else
-      flash[:fail] = "#{params} .... #{@c.attributes}"
       render :show
 
     end
   end
 
   def destroy
+
   end
 
-  def create_comment(options)
-    @comment = @landlord.comments.build
-    
-    @comment.assign_attributes(options[:comment].permit(:landlord_attribute))
+  def create_comment
+    @comment_params = {comment: params[:landlord][:comment][:comment], landlord_id: @landlord.id}
+    @comment = @landlord.comments.new(@comment_params)
+    @comment.assign_attributes(@comment_params)
     @landlord.comments.last.setIP request.remote_ip
     @comment
   end
