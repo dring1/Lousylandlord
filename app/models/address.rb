@@ -4,4 +4,6 @@ class Address < ActiveRecord::Base
 
 	validates :city_id, presence: true
 	validates :landlord_id, presence: true
+	validates :longitude, presence: true
+	validates :latitude, presence: true
 end

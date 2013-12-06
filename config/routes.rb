@@ -9,6 +9,8 @@ LousyLandLord::Application.routes.draw do
     resources :comments
   end
 
+  resources :addresses
+
 
   root :to =>  'static_pages#home'
 
@@ -18,4 +20,6 @@ LousyLandLord::Application.routes.draw do
   get '/tos', to: 'static_pages#TermsOfService'
   get '/contact', to: 'static_pages#contact'
   get '/about', to: 'static_pages#about'
+  get '/maps', to: 'static_pages#maps'
+  patch '/create_comment', to: 'landlords#create_comment'
 end

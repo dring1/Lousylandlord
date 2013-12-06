@@ -15,17 +15,17 @@ class LandlordsController < ApplicationController
   def create  	
 
     other_params = params[:landlord].slice!(:name, :city_id, :province_id)
-    @landlord = Landlord.find_or_initialize_by(params[:landlord].permit[:landlord_attribute])
 
-    @landlord.assign_attributes(other_params.permit[:landlord_attribute])
-    
+    @landlord = Landlord.find_or_initialize_by(params[:landlord].permit(:name, :city_id,:province_id))
     if @landlord.save 
-      adr_params = other_params[:address]
-      address_params = {landlord_id: @landlord.id, city_id: @landlord.city.id, unit: adr_params[:unit], 
-                        number: adr_params[:number], street: adr_params[:street], postal: adr_params[:postal]}
-      @a = @landlord.addresses.find_or_initialize_by(address_params) ## EDIT THIS LINE TO CHECK IF ADR ALREADY EXISTS
-      @a.save
-      flash[:success] = "Thank you for submitting a Landlord " 
+      #adr_params = other_params[:address]
+      #address_params = {landlord_id: @landlord.id, city_id: @landlord.city.id, unit: adr_params[:unit], 
+      #                  number: adr_params[:number], street: adr_params[:street], postal: adr_params[:postal]}
+      #@a = @landlord.addresses.find_or_initialize_by(address_params) ## EDIT THIS LINE TO CHECK IF ADR ALREADY EXISTS
+      #retrieve lat + long and save into the params
+      #@a.save
+      #flash[:success] = "#{address_params} ...\n #{adr_params}  ... \n #{other_params}" 
+      flash[:success] = "#{params} #{other_params} #{params[:landlord]}"
       redirect_to @landlord
     else
        render :new
@@ -38,15 +38,7 @@ class LandlordsController < ApplicationController
    def update
     
     @landlord = Landlord.find(params[:id])
-    @c = create_comment unless params[:landlord][:comment][:comment].size < 15
-   
-    if @landlord.update_attributes(params[:landlord].permit(:landlord_attribute))
-      flash[:success] = "Thank you for submitting a comment"
-      redirect_to @landlord
-    else
-      render :show
 
-    end
   end
 
   def destroy
@@ -54,13 +46,30 @@ class LandlordsController < ApplicationController
   end
 
   def create_comment
-    @comment_params = {comment: params[:landlord][:comment][:comment], landlord_id: @landlord.id}
-    @comment = @landlord.comments.new(@comment_params)
-    @comment.assign_attributes(@comment_params)
-    @landlord.comments.last.setIP request.remote_ip
-    @comment
-  end
+    @landlord = Landlord.find(params[:id])
+    comment_params = {comment: params[:landlord][:comment][:comment], landlord_id: @landlord.id}
+    @comment = @landlord.comments.build
+    @comment.assign_attributes(comment_params)
+    @comment.setIP request.remote_ip
 
+    if @landlord.save
+      redirect_to @landlord
+      flash[:success] = "Thank you for submitting a comment"
+    else 
+      redirect_to @landlord
+      flash[:error] = "Comments bust be between 15 and 500 characters! "
+    end
+
+  end
+private
+  def landlord_params
+    params.require(:landlord).permit(:name, :city_id, :province_id)
+  end
+  
+  def find_by_params( sname,scity_id,sprovince_id)
+    find_params = {name: sname, city_id: scity_id, province_id: sprovince_id}
+    Landlord.find_by find_params    
+  end 
 
 
 end

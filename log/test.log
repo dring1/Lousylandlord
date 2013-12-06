@@ -24888,3 +24888,244 @@ Binary data inserted for `string` type on column `password_digest`
   [1m[35mSQL (0.4ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 12 Oct 2013 16:46:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 12 Oct 2013 16:46:25 UTC +00:00]]
   [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "provinces" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test province"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cities" ("created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "test town"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = ' ' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$04$JHElclmH.EkcAy0tXJ3btO/NyD/d0SM/Ti8vqdssO30yjtB6pw7ii"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$04$YwbC27DoeJ9Qfzh4dhRFt.k74p9iLmiVa42qfwZ/NyUqSrrJ0jd1S"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$04$7gdkdTWdk2DLABo7ewD6s.c4E2UUiwfPL0Inl/DM9on1XctqbCT/O"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'USER@EXAMPLE.COM' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["email", "user@example.com"], ["password_digest", "$2a$04$90lIWDXaWjaSJI0wa0EF.O2a.EO2fww5v.87v6gLw.Z77Z8YcYeZa"], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "landlords" ("city_id", "created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["city_id", 1], ["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "Derptacos"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "landlords" ("city_id", "created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["city_id", 1], ["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "Derptacos"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "landlords" ("city_id", "created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["city_id", 1], ["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "Derptacos"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "landlords" ("city_id", "created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["city_id", 1], ["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "Derptacos"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "landlords" ("city_id", "created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["city_id", 1], ["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "Derptacos"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "landlords" ("city_id", "created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["city_id", 1], ["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "Derptacos"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "landlords" ("city_id", "created_at", "name", "province_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["city_id", 1], ["created_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00], ["name", "Derptacos"], ["province_id", 1], ["updated_at", Sat, 26 Oct 2013 21:34:25 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m

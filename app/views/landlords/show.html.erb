@@ -25,14 +25,17 @@
 			<span>Total comments : <%= @landlord.comments.count %> </span> 
 			
 		
-			<%= form_for @landlord do |f| %>
+			<%= form_for @landlord, url: {action: :create_comment, :id => @landlord.id } do |f| %>
 				<%= f.fields_for @comment do |comment_form| %>
-					<%= comment_form.text_area :comment, :columns => "40",:rows => "10", class:'frm-exp'%>
+					<%= comment_form.text_area :comment, :columns => "40",:rows => "10", 
+					class:'frm-exp' , placeholder: "Comments must be between 15 and 500 characters!" %>
+					<% params[:id] =  @landlord.id  %>
 				<% end %>
 				<div>
 					<%= f.submit "Submit", class:"btn btn-primary" %>
 				</div>	
 			<% end %>	
+
 	</div>
 </div>	
 
