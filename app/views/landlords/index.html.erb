@@ -7,6 +7,9 @@
 <th>Landlord's Name</th>
 <th>User Comment</th>
 <th>See profile</th>
+<% if signed_in? %>
+  <th>Delete</th>
+<% end %>
   <% @landlords.each do |l| %>
     <tr >     
       <td class='user-list'>
@@ -18,6 +21,9 @@
       <td>
       	<%= link_to 'Profile', l %>
       </td>
+      <% if signed_in? %>
+        <td><%= link_to 'Delete', root_url %></td>
+      <% end %>
     </tr>
   <% end %>
 

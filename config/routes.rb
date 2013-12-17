@@ -8,8 +8,9 @@ LousyLandLord::Application.routes.draw do
   resources :landlords do 
     resources :comments
   end
-
+  resources :sessions
   resources :addresses
+  resources :users
 
 
   root :to =>  'static_pages#home'
@@ -22,4 +23,6 @@ LousyLandLord::Application.routes.draw do
   get '/about', to: 'static_pages#about'
   get '/maps', to: 'static_pages#maps'
   patch '/create_comment', to: 'landlords#create_comment'
+  get '/signin', to: 'sessions#new'
+  get '/signout', to: 'sessions#destroy'
 end

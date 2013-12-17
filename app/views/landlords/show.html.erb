@@ -19,8 +19,10 @@
 			<% if @landlord.addresses.any? %>
 				<%  @landlord.addresses.each do |f| %>
 					<%= content_tag	:p, "#{f.number} #{f.street}  Apt/Unit: #{f.unit}"  %>
+					<% if signed_in? %>
+        				<td><%= link_to 'Delete', root_url %></td><br>
+      				<% end %>
 				<% end %>
-
 			<% end %>
 			<span>Total comments : <%= @landlord.comments.count %> </span> 
 			
