@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131219195444) do
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20131015142053) do
+=======
+ActiveRecord::Schema.define(version: 20131011030623) do
+>>>>>>> e99003e1284fb83d28279f09d6fb26cb239f66ce
 
   create_table "addresses", force: true do |t|
     t.string   "number"
@@ -27,17 +31,22 @@ ActiveRecord::Schema.define(version: 20131219195444) do
   end
 
   create_table "cities", force: true do |t|
-    t.string  "name"
-    t.integer "province_id"
+    t.string   "name"
+    t.integer  "province_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "comments", force: true do |t|
-    t.integer  "landlord_id"
-    t.string   "comment"
+    t.text     "comment"
+    t.boolean  "terms"
     t.string   "ip"
+    t.integer  "landlord_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "comments", ["landlord_id", "created_at"], name: "index_comments_on_landlord_id_and_created_at"
 
   create_table "landlords", force: true do |t|
     t.string   "name"
@@ -49,16 +58,16 @@ ActiveRecord::Schema.define(version: 20131219195444) do
 
   create_table "provinces", force: true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: true do |t|
     t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.string   "password_digest"
-    t.boolean  "admin",           default: true
+    t.boolean  "admin"
     t.string   "remember_token"
   end
 
