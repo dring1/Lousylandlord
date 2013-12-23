@@ -38,6 +38,27 @@
 				</div>	
 			<% end %>	
 
+			<p> Don't see the address? Add click here to add one </p>
+
+			<!-- Address form - extract in future -->
+
+			<div>
+				<%= form_for(:address, url: addresses_path) do  |address_form| %>
+					
+					<%= address_form.label :number %>
+					<%= address_form.text_field :number %>
+					<%= address_form.label :street %>
+					<%= address_form.text_field :street %>
+					<%= address_form.label "#{:unit}# / Apt #" %>
+					<%= address_form.text_field :unit %>
+					<%= address_form.label :postal %>
+					<%= address_form.text_field :postal %><br/>
+					<%=	address_form.submit "Save Address",  class:"btn btn-primary" %>
+
+				<% end %>
+			</div>
+
+
 	</div>
 </div>	
 

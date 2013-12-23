@@ -24,8 +24,8 @@ class LandlordsController < ApplicationController
       #@a = @landlord.addresses.find_or_initialize_by(address_params) ## EDIT THIS LINE TO CHECK IF ADR ALREADY EXISTS
       #retrieve lat + long and save into the params
       #@a.save
-      #flash[:success] = "#{address_params} ...\n #{adr_params}  ... \n #{other_params}" 
-      flash[:success] = "#{params} #{other_params} #{params[:landlord]}"
+      flash[:success] = "#{address_params} ...\n #{adr_params}  ... \n #{other_params}" 
+      #flash[:success] = "#{params} #{other_params} #{params[:landlord]}"
       redirect_to @landlord
     else
        render :new
@@ -61,6 +61,10 @@ class LandlordsController < ApplicationController
     end
 
   end
+
+  def create_address
+    
+  end 
 private
   def landlord_params
     params.require(:landlord).permit(:name, :city_id, :province_id)
