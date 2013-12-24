@@ -1,0 +1,4 @@
+<%= content_tag	:p, "#{address.number} #{address.street}  Apt/Unit: #{address.unit}"  %>
+<% if signed_in? %>
+	<td><%= link_to 'Delete', address, method: :delete, data: { confirm: "You sure?" } %></td><br>
+<% end %>
