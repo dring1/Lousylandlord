@@ -38,11 +38,11 @@
 				</div>	
 			<% end %>	
 
-			<p> Don't see the address? Add click here to add one </p>
+			<p> Don't see the address? <a href="#" id="address-form-toggle">Add click here to add one</a> </p>
 
 			<!-- Address form - extract in future -->
 
-			<div>
+			<div class="address-form">
 				<%= form_for(:address, url: addresses_path) do  |address_form| %>
 					<!-- not safe?!? -->
 					<%= hidden_field_tag 'id', @landlord.id  %> 

@@ -29,6 +29,9 @@ private
 		params.require(:id)
 	end
 
+	#def calc lat  & long  - generate map locations 
+	#end
+
 
 
 end
