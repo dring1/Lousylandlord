@@ -1,4 +1,4 @@
-<h1>Submit a Landlord</h1>
+<h1 class="center">Submit a Landlord or Find One!</h1>
 
 
 <%= render '/shared/error_messages' %>
@@ -13,9 +13,6 @@
 	<div class="controls">
 		<%= f.text_field :name , class:'frm-exp' %>
 	</div>
-</div>
-<div class ="control-group">
-	
 	
 	<div class="controls">
 
@@ -30,20 +27,7 @@
 	</div>
 </div>
 <!-- insert address -->
-<div>
-	<%= f.fields_for :address do  |address_form| %>
-		
-		<%= address_form.label :number %>
-		<%= address_form.text_field :number %>
-		<%= address_form.label :street %>
-		<%= address_form.text_field :street %>
-		<%= address_form.label "#{:unit}# / Apt #" %>
-		<%= address_form.text_field :unit %>
-		<%= address_form.label :postal %>
-		<%= address_form.text_field :postal %>
 
-	<% end %>
-</div>
 
 <div class="center submit">
 	<%= f.submit "Submit", class: " btn btn-large btn-primary" %>
