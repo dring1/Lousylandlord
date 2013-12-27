@@ -107,6 +107,12 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
+#map_canvas {
+  width: 95%; 
+  height: 75%; 
+  margin-right: 1%;
+}
+
 #map_canvas img,
 .google-maps img {
   max-width: none;
