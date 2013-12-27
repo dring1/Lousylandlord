@@ -6,4 +6,8 @@ class Address < ActiveRecord::Base
 	validates :landlord_id, presence: true
 	validates :longitude, presence: true
 	validates :latitude, presence: true
+
+	def latlng
+		[self.latitude, self.longitude]
+	end
 end
