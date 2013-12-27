@@ -2,6 +2,13 @@
 <%= form_tag(landlords_path, :method => "get") do %>
 
   		<%= text_field_tag :search, params[:search], placeholder:"Enter a name..." , class:"user-search-input"%>
+  		<div class="controls">
+
+		<%= collection_select :province, :province_id, Province.order(:name), :id, :name, include_blank: true %>		
+		</div>
+		<div class="controls">
+			<%= grouped_collection_select :city, :city_id, Province.order(:name), :cities, :name,  :id, :name, include_blank: true %>	
+		</div>
   		<%= submit_tag "Search", :name => nil, class: 'btn' %>
   		<%= link_to  "All", landlords_path, class:'btn'%>  	
 <% end %> 
