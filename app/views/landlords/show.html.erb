@@ -30,28 +30,32 @@
 		<h3> <%= @landlord.city.name %>, <%= @landlord.province.name %> </h3>
 		<% if @landlord.addresses.any? %>
 			<%  @landlord.addresses.each do |f| %>
-				<%= content_tag	:p, "#{f.number} #{f.street}  Apt/Unit: #{f.unit}"  %>
+				<%= content_tag  :p, "#{f.number}, #{f.street}, Apt/Unit: #{f.unit}, postal code: #{f.postal}"  %>
 				<% if signed_in? %>
 					<td><%= link_to 'Delete', root_url %></td><br>
 				<% end %>
 			<% end %>
 		<% end %>
 		<div id="map_canvas" style="height:400px"></div>
-		<p> Don't see the address? Add click here to add one </p>
+		<p> Don't see the address? <a href="#" id="address-form-toggle">Add click here to add one</a> </p>
  
         <!-- Address form - extract in future -->
  
-        <div>
+        <div class="address-form">
          	<%= form_for(:address, url: addresses_path) do  |address_form| %>
            
+         		<!-- not safe?!? -->
+          		<%= hidden_field_tag 'id', @landlord.id  %> 
+ 		        <%= hidden_field_tag 'city_id', @landlord.city.id  %>
+
            		<%= address_form.label :number %>
-           		<%= address_form.text_field :number %>
+           		<%= address_form.text_field :number ,placeholder: "example: 123"%>
            		<%= address_form.label :street %>
-           		<%= address_form.text_field :street %>
-           		<%= address_form.label "#{:unit}# / Apt #" %>
-           		<%= address_form.text_field :unit %>
+           		<%= address_form.text_field :street ,placeholder: "example: Fake Street"%>
+           		<%= address_form.label "#{:unit}# / Apt #"%>
+           		<%= address_form.text_field :unit, placeholder: "example: 321"  %>
            		<%= address_form.label :postal %>
-           		<%= address_form.text_field :postal %><br/>
+           		<%= address_form.text_field :postal ,placeholder: "example: A1B 2C3" %><br/>
            		<%= address_form.submit "Save Address",  class:"btn btn-primary" %>
  
          	<% end %>
