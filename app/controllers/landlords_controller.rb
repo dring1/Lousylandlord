@@ -45,7 +45,9 @@ class LandlordsController < ApplicationController
   end
 
   def destroy
-
+    Landlord.find(params[:id]).destroy
+    flash[:success] = "Landlord destroyed."
+    redirect_to landlords_url
   end
 
   def create_comment
@@ -62,7 +64,6 @@ class LandlordsController < ApplicationController
       redirect_to @landlord
       flash[:error] = "Comments bust be between 15 and 500 characters! "
     end
-
   end
 
   def create_address

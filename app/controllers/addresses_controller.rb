@@ -23,6 +23,12 @@ class AddressesController < ApplicationController
 
 	end
 
+	def destroy
+		Address.find(params[:id]).destroy
+    	flash[:success] = "Address destroyed."
+    	redirect_to :back
+	end
+
 private
 	def address_strong_params(total_params)
 		params.require(:address).permit(:number, :street, :unit, :postal)

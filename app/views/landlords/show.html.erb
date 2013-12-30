@@ -16,11 +16,7 @@
 			</div>	
 		<% end %>	
 		<% if @landlord.comments.any? %>
-			<% @landlord.comments.each do |f| %>
-			<% if f.valid? %> 
-				<%= content_tag :p, f.comment , class:'comment-text ' %> 			
-			<% end %>
-		<% end %>
+			<%= render partial: 'shared/landlord_comments' %>
 		<% else %>
 			<%= content_tag :strong, "No comments" , class:'comment-text ' %> 			
 		<% end %>
@@ -35,7 +31,9 @@
 					<%= link_to_function "#{f.number} #{f.street}, Apt/Unit: #{f.unit}, postal code: #{f.postal}", "centerMapOnCoordinates(#{f.latitude}, #{f.longitude})" %>
 					<br>
 					<% if signed_in? %>
-						<%= link_to 'Delete', root_url %><br>
+						<%= link_to 'Delete', f, method: :delete,
+                                     			 data: { confirm: "You sure?" },
+                                     			 title: f %><br>
 					<% end %>
 				</p>
 			<% end %>
