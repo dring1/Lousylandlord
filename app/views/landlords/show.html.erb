@@ -1,4 +1,5 @@
 <%= render '/shared/error_messages' %>
+<%= include_gon %>
 <div class="show-contents">
 	<div class = "comment-section" >
 		<h3>Leave a comment</h3>
@@ -30,10 +31,13 @@
 		<h3> <%= @landlord.city.name %>, <%= @landlord.province.name %> </h3>
 		<% if @landlord.addresses.any? %>
 			<%  @landlord.addresses.each do |f| %>
-				<%= content_tag  :p, "#{f.number}, #{f.street}, Apt/Unit: #{f.unit}, postal code: #{f.postal}"  %>
-				<% if signed_in? %>
-					<td><%= link_to 'Delete', root_url %></td><br>
-				<% end %>
+				<p>
+					<%= link_to_function "#{f.number} #{f.street}, Apt/Unit: #{f.unit}, postal code: #{f.postal}", "centerMapOnCoordinates(#{f.latitude}, #{f.longitude})" %>
+					<br>
+					<% if signed_in? %>
+						<%= link_to 'Delete', root_url %><br>
+					<% end %>
+				</p>
 			<% end %>
 		<% end %>
 		<div id="map_canvas" style="height:400px"></div>
