@@ -12,7 +12,7 @@ class LandlordsController < ApplicationController
     @comment = @landlord.comments.build
     gon.addresses = Address.where(landlord_id: params[:id])
     gon.city_id = Landlord.find(params[:id]).city_id
-    gon.city = City.find(gon.city_id).name
+    gon.city = City.find(gon.city_id).name + ", " + Province.find(City.find(gon.city_id).province_id).name 
   end
 
   def create  	
