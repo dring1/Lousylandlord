@@ -6,7 +6,7 @@ class Landlord < ActiveRecord::Base
     belongs_to :province
     belongs_to :city
 
-    accepts_nested_attributes_for :comments, :addresses
+    accepts_nested_attributes_for :comments, :addresses, allow_destroy: true
 
     validates :name, presence: true, 
     				length: {minimum: 2, maximum: 50}

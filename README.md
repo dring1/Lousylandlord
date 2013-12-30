@@ -8,12 +8,10 @@ Put in the landlords name and see if anyone has some comments !
 
 User driven.
 
+Google Maps API hooked up to rental properties and show comments regarding certain properties
+
 -----------------------------------------------
 
-On the horizon 
-
-
-Google Maps API hooked up to rental properties and show comments regarding a ceratin property
 
 
 

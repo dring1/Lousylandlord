@@ -22,7 +22,9 @@
       	<%= link_to 'Profile', l %>
       </td>
       <% if signed_in? %>
-        <td><%= link_to 'Delete', root_url %></td>
+        <td><%= link_to 'Delete', l, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: l.name %></td>
       <% end %>
     </tr>
   <% end %>

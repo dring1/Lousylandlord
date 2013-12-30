@@ -1,4 +1,5 @@
 <%= render '/shared/error_messages' %>
+<%= include_gon %>
 <div class="show-contents">
 	<div class = "comment-section" >
 		<h3>Leave a comment</h3>
@@ -15,11 +16,7 @@
 			</div>	
 		<% end %>	
 		<% if @landlord.comments.any? %>
-			<% @landlord.comments.each do |f| %>
-			<% if f.valid? %> 
-				<%= content_tag :p, f.comment , class:'comment-text ' %> 			
-			<% end %>
-		<% end %>
+			<%= render partial: 'shared/landlord_comments' %>
 		<% else %>
 			<%= content_tag :strong, "No comments" , class:'comment-text ' %> 			
 		<% end %>
@@ -30,10 +27,15 @@
 		<h3> <%= @landlord.city.name %>, <%= @landlord.province.name %> </h3>
 		<% if @landlord.addresses.any? %>
 			<%  @landlord.addresses.each do |f| %>
-				<%= content_tag  :p, "#{f.number}, #{f.street}, Apt/Unit: #{f.unit}, postal code: #{f.postal}"  %>
-				<% if signed_in? %>
-					<td><%= link_to 'Delete', root_url %></td><br>
-				<% end %>
+				<p>
+					<%= link_to_function "#{f.number} #{f.street}, Apt/Unit: #{f.unit}, postal code: #{f.postal}", "centerMapOnCoordinates(#{f.latitude}, #{f.longitude})" %>
+					<br>
+					<% if signed_in? %>
+						<%= link_to 'Delete', f, method: :delete,
+                                     			 data: { confirm: "You sure?" },
+                                     			 title: f %><br>
+					<% end %>
+				</p>
 			<% end %>
 		<% end %>
 		<div id="map_canvas" style="height:400px"></div>

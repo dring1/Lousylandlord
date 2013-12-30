@@ -7,10 +7,13 @@ class Address < ActiveRecord::Base
 	validates :street, presence: true
 	validates :number, presence: true
 	validates :unit, presence: true
+	geocoded_by :get_address
+	after_validation :geocode
 	# validates :longitude, presence: true
 	# validates :latitude, presence: true
 
-	def latlng
-		[self.latitude, self.longitude]
+	def get_address
+		number + " " + street + " " + City.find(city_id).name + ", " + Province.find(City.find(city_id).province_id).name 
 	end
+
 end
