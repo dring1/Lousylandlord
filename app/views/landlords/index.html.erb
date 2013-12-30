@@ -1,6 +1,9 @@
 <h1>Landlord Results</h1>
 <div class="center" > 
 	<input type="text" class="search-query" placeholder="Filter name ... ">
+  <br/><br/>
+
+  <%= link_to "View map", root_url %> <!-- Will link to full page map if search was made by city -->
 </div>
 <br>
 <table class='table table-hover'>
@@ -24,7 +27,8 @@
       <% if signed_in? %>
         <td><%= link_to 'Delete', l, method: :delete,
                                      data: { confirm: "You sure?" },
-                                     title: l.name %></td>
+                                     title: l.name %>
+        </td>
       <% end %>
     </tr>
   <% end %>
