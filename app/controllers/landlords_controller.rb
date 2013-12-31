@@ -6,7 +6,7 @@ class LandlordsController < ApplicationController
   def index
     if params[:map_button] && !params[:city][:city_id].blank?
       gon.city_id = params[:city][:city_id]
-      gon.addresses = Address.where(city_id: gon.city)
+      gon.addresses = Address.where(city_id: gon.city_id)
       gon.city = City.find(gon.city_id).name + ", " + Province.find(City.find(gon.city_id).province_id).name 
       redirect_to action: 'citymap', status: 303
     else
