@@ -21,7 +21,7 @@ LousyLandLord::Application.routes.draw do
   get '/tos', to: 'static_pages#TermsOfService'
   get '/contact', to: 'static_pages#contact'
   get '/about', to: 'static_pages#about'
-  get '/maps', to: 'static_pages#maps'
+  get '/citymap', to: 'landlords#citymap'
   patch '/create_comment', to: 'landlords#create_comment'
   get '/signin', to: 'sessions#new'
   get '/signout', to: 'sessions#destroy'

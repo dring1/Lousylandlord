@@ -4,7 +4,14 @@ class LandlordsController < ApplicationController
   end
 
   def index
-    @landlords = Landlord.paginate(page: params[:landlord]).order(:name).search(params[:search])
+    if params[:map_button] && !params[:city][:city_id].blank?
+      gon.city_id = params[:city][:city_id]
+      gon.addresses = Address.where(city_id: gon.city)
+      gon.city = City.find(gon.city_id).name + ", " + Province.find(City.find(gon.city_id).province_id).name 
+      redirect_to action: 'citymap', status: 303
+    else
+      @landlords = Landlord.paginate(page: params[:landlord]).order(:name).search(params[:search])
+    end
   end
 
   def show  	
@@ -15,11 +22,14 @@ class LandlordsController < ApplicationController
     gon.city = City.find(gon.city_id).name + ", " + Province.find(City.find(gon.city_id).province_id).name 
   end
 
+  def citymap
+  end
+
   def create  	
 
     other_params = params[:landlord].slice!(:name, :city_id, :province_id)
 
-    @landlord = Landlord.find_or_initialize_by(params[:landlord].permit(:name, :city_id,:province_id))
+    @landlord = Landlord.find_or_initialize_by(params[:landlord].permit(:name, :city_id, :province_id))
     if @landlord.save 
       #adr_params = other_params[:address]
       #address_params = {landlord_id: @landlord.id, city_id: @landlord.city.id, unit: adr_params[:unit], 
