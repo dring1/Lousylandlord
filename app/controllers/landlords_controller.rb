@@ -9,7 +9,7 @@ class LandlordsController < ApplicationController
       gon.addresses = Address.where(city_id: gon.city_id)
       gon.city = City.find(gon.city_id).name + ", " + Province.find(City.find(gon.city_id).province_id).name 
       gon.landlords = Landlord.where(city_id: gon.city_id)
-      redirect_to action: 'citymap', status: 303
+      render :citymap
     else
       @landlords = Landlord.paginate(page: params[:landlord]).order(:name).search(params[:search])
     end

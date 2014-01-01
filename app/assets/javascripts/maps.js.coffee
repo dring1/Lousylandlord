@@ -2,10 +2,10 @@ geocoder = null
 map = null
 infowindows = null
 lastWindow = null
+blueIconLink = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
 
 gm_init = ->
   geocoder = new google.maps.Geocoder()
-
   if gon.addresses.length > 0
     gm_center = new google.maps.LatLng(gon.addresses[0].latitude, gon.addresses[0].longitude)
   else
@@ -21,11 +21,13 @@ encodeAddress = (address) ->
     if status is google.maps.GeocoderStatus.OK
       map.setCenter(results[0].geometry.location)
     else
-      alert "Geocode was not successful for the following reason: " + status
+      #alert "Geocode was not successful for the following reason: " + status
+      alert("Geocoder could not find the location")
 
 displayAllMarkers = ->
   i = 0
   infowindows = new Array()
+  bounds = new google.maps.LatLngBounds();
   while i < gon.addresses.length
     coord = new google.maps.LatLng(gon.addresses[i].latitude, gon.addresses[i].longitude)
     marker = new google.maps.Marker(
@@ -33,10 +35,14 @@ displayAllMarkers = ->
       position: coord
       title: 'Landlord'
     )
+    bounds.extend(coord)
     for landlord in gon.landlords
       if gon.addresses[i].landlord_id == landlord.id
-        createInfoWindow(marker, "<b>" + landlord.name + "</b><br>" + gon.addresses[i].number + " " + gon.addresses[i].street + ", " + gon.city + "<br/>" + "<a href=\'/landlords/" + landlord.id + "\'>View " + landlord.name + "\'s page</a>")
+        createInfoWindow(marker, "<b>" + landlord.name + "</b><br>" + gon.addresses[i].number + " " + 
+          gon.addresses[i].street + ", " + gon.city + "<br/>" + "<a href=\'/landlords/" + landlord.id + "\'>View " + 
+          landlord.name + "\'s page</a>")
     i++
+    map.fitBounds(bounds)
 
 createInfoWindow = (marker, text) ->
   infowindow = new google.maps.InfoWindow(
@@ -56,3 +62,22 @@ $ ->
 root = exports ? this
 root.centerMapOnCoordinates = (lat, long) ->
   map.setCenter(new google.maps.LatLng(lat, long));
+
+root.displayLandmarkMarker = ->
+  address = document.getElementById('place').value
+  geocoder.geocode
+    address: address
+  , (results, status) ->
+    if status is google.maps.GeocoderStatus.OK
+      map.setCenter(results[0].geometry.location)
+      center = map.getCenter()
+      marker = new google.maps.Marker(
+        map: map
+        position: center
+        title: address
+      )
+      marker.setIcon(blueIconLink)
+      createInfoWindow(marker, address)
+    else
+      alert("Geocoder could not find the location")
+  
