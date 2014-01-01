@@ -1,8 +1,11 @@
 geocoder = null
 map = null
+infowindows = null
+lastWindow = null
 
 gm_init = ->
   geocoder = new google.maps.Geocoder()
+
   if gon.addresses.length > 0
     gm_center = new google.maps.LatLng(gon.addresses[0].latitude, gon.addresses[0].longitude)
   else
@@ -22,14 +25,27 @@ encodeAddress = (address) ->
 
 displayAllMarkers = ->
   i = 0
-
+  infowindows = new Array()
   while i < gon.addresses.length
     coord = new google.maps.LatLng(gon.addresses[i].latitude, gon.addresses[i].longitude)
-    new google.maps.Marker(
+    marker = new google.maps.Marker(
       map: map
       position: coord
+      title: 'Landlord'
     )
+    createInfoWindow(marker, gon.addresses[i].number + " " + gon.addresses[i].street + ", " + gon.city)
     i++
+
+createInfoWindow = (marker, text) ->
+  infowindow = new google.maps.InfoWindow(
+    content: text
+    maxWidth: 200
+  )
+  infowindows.push(infowindow)
+  google.maps.event.addListener marker, "click", ->
+    lastWindow.close() if lastWindow
+    lastWindow = infowindow
+    infowindow.open marker.get("map"), marker
 
 $ ->
   map = gm_init()
