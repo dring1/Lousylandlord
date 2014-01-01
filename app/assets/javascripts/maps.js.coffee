@@ -33,7 +33,9 @@ displayAllMarkers = ->
       position: coord
       title: 'Landlord'
     )
-    createInfoWindow(marker, gon.addresses[i].number + " " + gon.addresses[i].street + ", " + gon.city)
+    for landlord in gon.landlords
+      if gon.addresses[i].landlord_id == landlord.id
+        createInfoWindow(marker, "<b>" + landlord.name + "</b><br>" + gon.addresses[i].number + " " + gon.addresses[i].street + ", " + gon.city + "<br/>" + "<a href=\'/landlords/" + landlord.id + "\'>View " + landlord.name + "\'s page</a>")
     i++
 
 createInfoWindow = (marker, text) ->

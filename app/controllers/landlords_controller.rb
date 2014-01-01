@@ -8,6 +8,7 @@ class LandlordsController < ApplicationController
       gon.city_id = params[:city][:city_id]
       gon.addresses = Address.where(city_id: gon.city_id)
       gon.city = City.find(gon.city_id).name + ", " + Province.find(City.find(gon.city_id).province_id).name 
+      gon.landlords = Landlord.where(city_id: gon.city_id)
       redirect_to action: 'citymap', status: 303
     else
       @landlords = Landlord.paginate(page: params[:landlord]).order(:name).search(params[:search])
@@ -19,6 +20,7 @@ class LandlordsController < ApplicationController
     @comment = @landlord.comments.build
     gon.addresses = Address.where(landlord_id: params[:id])
     gon.city_id = Landlord.find(params[:id]).city_id
+    gon.landlords = Landlord.where(city_id: gon.city_id)
     gon.city = City.find(gon.city_id).name + ", " + Province.find(City.find(gon.city_id).province_id).name 
   end
 
