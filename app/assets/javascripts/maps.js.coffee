@@ -38,16 +38,16 @@ displayAllMarkers = ->
     bounds.extend(coord)
     for landlord in gon.landlords
       if gon.addresses[i].landlord_id == landlord.id
-        createInfoWindow(marker, "<b>" + landlord.name + "</b><br>" + gon.addresses[i].number + " " + 
+        createInfoWindow(marker, "<div class=\"infowindow\" style=\"width:250px\">" + "<b>" + landlord.name + "</b><br>" + gon.addresses[i].number + " " + 
           gon.addresses[i].street + ", " + gon.city + "<br/>" + "<a href=\'/landlords/" + landlord.id + "\'>View " + 
-          landlord.name + "\'s page</a>")
+          landlord.name + "\'s page</a><br/>" + "</div>")
     i++
     map.fitBounds(bounds)
 
 createInfoWindow = (marker, text) ->
   infowindow = new google.maps.InfoWindow(
     content: text
-    maxWidth: 200
+    maxWidth: 300
   )
   infowindows.push(infowindow)
   google.maps.event.addListener marker, "click", ->
@@ -65,6 +65,8 @@ root.centerMapOnCoordinates = (lat, long) ->
 
 root.displayLandmarkMarker = ->
   address = document.getElementById('place').value
+  if infowindows == null
+    infowindows = new Array()
   geocoder.geocode
     address: address
   , (results, status) ->
@@ -77,7 +79,7 @@ root.displayLandmarkMarker = ->
         title: address
       )
       marker.setIcon(blueIconLink)
-      createInfoWindow(marker, address)
+      createInfoWindow(marker, "<b>" + address + "</b>")
     else
       alert("Geocoder could not find the location")
   
