@@ -10,13 +10,15 @@ LousyLandLord::Application.routes.draw do
   end
   resources :sessions
   resources :addresses
+  
   resources :users
+  resources :searches
 
 
   root :to =>  'static_pages#home'
 
   get '/submit', to: 'landlords#new'
-  get '/search', to: 'static_pages#search'
+  get '/search', to: 'searches#new'
   get '/home', to: 'static_pages#home'
   get '/tos', to: 'static_pages#TermsOfService'
   get '/contact', to: 'static_pages#contact'

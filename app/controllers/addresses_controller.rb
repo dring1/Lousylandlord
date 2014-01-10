@@ -30,7 +30,7 @@ class AddressesController < ApplicationController
 	end
 
 private
-	def address_strong_params(total_params)
+	def address_strong_params
 		params.require(:address).permit(:number, :street, :unit, :postal)
 		params.require(:id)
 	end
