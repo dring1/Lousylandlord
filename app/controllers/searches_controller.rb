@@ -3,27 +3,61 @@ class SearchesController < ApplicationController
 		@search = Search.new
 	end
 
+
+
+	# def create_landlord_search
+	# 	@search = Search.create!(search_params)
+	# 	@search.landlords
+	# 	if @search.save
+	# 		flash[:success] = params[:landlord].present? 
+
+	# 		redirect_to @search
+	# 	else
+
+	# 	end
+	# end
+
+	# def create_address_search
+	# 	@search = Search.create!(search_params)
+	# 	@search.addresses
+	# 	if @search.save
+
+	# 		redirect_to @search
+	# 	else
+
+	# 	end
+		
+	# end
+
 	def create
 		@search = Search.create!(search_params)
-		redirect_to @search
+		if params[:landlord]
+			p "*************** LL CALLED"
+			@search.landlords
+		else
+			p "********** ADDRESS CALLED"
+			@search.addresses
+		end
+		if @search.save 
+			redirect_to @search
+		else
+
+		end
 	end
 
-	def create_landlord_search
+	def show
+		@search = Search.find(params[:id])
 	end
+
+
+
 
 	def create_address_search
 		
 	end
 
 private
-	def search_landlords
-		landlords = Landlord.order(:name)
-		landlords = landlords.where("name like ?", "%#{name}%") if name.present?
-	end
 
-	def search_addreses
-		
-	end
 
 	def search_params
 		params.require(:search).permit(:name, :province_id, :city_id, :street, :postal, :grade)
