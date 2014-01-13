@@ -1,4 +1,4 @@
-<h1 class="center">Submit a Landlord or Find One!</h1>
+<h1 class="center">Submit a Landlord!</h1>
 
 
 <%= render '/shared/error_messages' %>
@@ -8,13 +8,12 @@
 
 
 
-<div class ="control-group">
-	<%= f.label "Landlord's Name : " , class:'control-label '%>
+<div class ="control-group center-div">
 	<div class="controls">
-		<%= f.text_field :name , class:'frm-exp' %>
-	</div>
+	<%= f.label "Landlord's Name : "%>
 	
-	<div class="controls">
+		<%= f.text_field :name  %>
+	
 
 		<%= f.label :province_id %>
 
