@@ -1,4 +1,3 @@
-
 geocoder = null
 map = null
 infowindows = null
