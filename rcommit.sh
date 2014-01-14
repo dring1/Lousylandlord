@@ -1,7 +1,7 @@
 #!/bin/bash
 # Call this script from the root directory of the project
 # Pass in your commit message
-# Example: ./rcommit "Commit message"
+# Example: ./rcommit.sh "Commit message"
 
 echo "rm -rf tmp/"
 rm -rf tmp/
