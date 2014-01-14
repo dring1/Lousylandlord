@@ -1,69 +1,22 @@
 <%= render '/shared/error_messages' %>
 <%= include_gon %>
 <div class="show-contents">
-	<div class = "comment-section" >
-		<h3>Leave a comment</h3>
-		<span>Total comments : <%= @landlord.comments.count %> </span> 
-		
-		<%= form_for @landlord, url: {action: :create_comment, :id => @landlord.id } do |f| %>
-			<%= f.fields_for @comment do |comment_form| %>
-				<%= comment_form.text_area :comment, :columns => "40",:rows => "10", 
-					class:'frm-exp' , placeholder: "Comments must be between 15 and 500 characters!" %>
-				<% params[:id] =  @landlord.id  %>
-			<% end %>
-			<div>
-				<%= f.submit "Submit", class:"btn btn-primary" %>
-			</div>	
-		<% end %>	
-		<% if @landlord.comments.any? %>
-			<%= render partial: 'shared/landlord_comments' %>
-		<% else %>
-			<%= content_tag :strong, "No comments" , class:'comment-text ' %> 			
-		<% end %>
-	</div>
+	<%= render 'comment_section' %>
+
+
 	<div class= "show-left">	
 		
 		<h1> <%= @landlord.name %> </h1>
 		<h3> <%= @landlord.city.name %>, <%= @landlord.province.name %> </h3>
-		<% if @landlord.addresses.any? %>
-			<%  @landlord.addresses.each do |f| %>
-				<p>
-					<%= link_to_function "#{f.number} #{f.street}, Apt/Unit: #{f.unit}, postal code: #{f.postal}", "centerMapOnCoordinates(#{f.latitude}, #{f.longitude})" %>
-					<br>
-					<% if signed_in? %>
-						<%= link_to 'Delete', f, method: :delete,
-                                     			 data: { confirm: "You sure?" },
-                                     			 title: f %><br>
-					<% end %>
-				</p>
-			<% end %>
-		<% end %>
-		<div id="map_canvas" style="height:400px"></div>
+		<%= render 'address_list' %>
+
+		<div id="map_canvas" ></div>
+
 		<p> Don't see the address? <a href="#" id="address-form-toggle">Add click here to add one</a> </p>
  
         <!-- Address form - extract in future -->
  
-        <div class="address-form">
-         	<%= form_for(:address, url: addresses_path) do  |address_form| %>
-           
-         		<!-- not safe?!? -->
-          		<%= hidden_field_tag 'id', @landlord.id  %> 
- 		        <%= hidden_field_tag 'city_id', @landlord.city.id  %>
- 		        <%= hidden_field_tag 'province_id', @landlord.province.id  %>
-
-
-           		<%= address_form.label :number %>
-           		<%= address_form.text_field :number ,placeholder: "example: 123"%>
-           		<%= address_form.label :street %>
-           		<%= address_form.text_field :street ,placeholder: "example: Fake Street"%>
-           		<%= address_form.label "#{:unit}# / Apt #"%>
-           		<%= address_form.text_field :unit, placeholder: "example: 321"  %>
-           		<%= address_form.label :postal %>
-           		<%= address_form.text_field :postal ,placeholder: "example: A1B 2C3" %><br/>
-           		<%= address_form.submit "Save Address",  class:"btn btn-primary" %>
- 
-         	<% end %>
-       	</div>
+        <%= render 'address_form' %>
 	</div>
 </div>	
 
