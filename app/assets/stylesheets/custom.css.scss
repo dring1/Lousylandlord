@@ -21,6 +21,9 @@ textarea {
 .center {
   text-align: center;
 }
+.left-text{
+  text-align: left;
+}
 .center h1 {
   margin-bottom: 10px;
 }
@@ -93,7 +96,7 @@ footer {
   margin: 0 auto;
   width: 80%;
   position: relative;
-  margin-top: 20px;
+  margin-top: 10%;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #999;
@@ -249,4 +252,12 @@ footer ul li {
 .show-left{
   width: 50%;
   float: left;
+}
+
+
+.center-div{
+  width: 80%;
+  margin-left: 19%;
+  display: block;
+  position: relative;
 }
