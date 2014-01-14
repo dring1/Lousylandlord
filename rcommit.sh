@@ -1,15 +1,16 @@
 #!/bin/bash
-# For this script to work, create an environment variable called LOUSYLANDLORD and assign it the absolute path
-# of your LLL repo. For me its /Users/Frederic_Marchand/Documents/Code/Ruby on Rails/LousyLandlord
+# Call this script from the root directory of the project
 # Pass in your commit message
-#
+# Example: ./rcommit "Commit message"
 
-#if [ ! -n $1 ]; then
-#    cd $LOUSYLANDLORD
-    rm -rf tmp/
-    git add -A .
-    git status
-    git commit -m "\"$1\""
-    bundle exec rake db:migrate
-    echo "Ready to Push!\n"
-#fi
+echo "rm -rf tmp/"
+rm -rf tmp/
+echo "git add -A ."
+git add -A .
+echo "git status"
+git status
+echo "git commit -m \"$1\""
+git commit -m "\"$1\""
+echo "bundle exec rake db:migrate"
+bundle exec rake db:migrate
+echo "Ready to Push!\n"
