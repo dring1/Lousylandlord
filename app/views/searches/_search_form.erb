@@ -5,17 +5,18 @@
 		<div class="show-left">
 		<%= f.label :name %>  	
 		<%= f.text_field :name , placeholder: "Example" %>
+				<%= f.label "Address Number" %>  	
+		<%= f.text_field :streetnum, placeholder: "123" %>
 		<%= f.label :street %>  	
 		<%= f.text_field :street, placeholder: "Fake St." %>
 		
-		<%= f.label :postal %>  	
-		<%= f.text_field :postal, placeholder: 'A1B 2C3' %>
+		
 		</div>
 
 		<div class="show-rights">
+	<%= f.label :postal %>  	
+		<%= f.text_field :postal, placeholder: 'A1B 2C3' %>
 
-		<%= f.label "Address Number" %>  	
-		<%= f.text_field :streetnum%>
 		<div >
 			<%= f.label :province %>
 			<%= f.collection_select :province_id, Province.order(:name), :id, :name, include_blank: true %>
