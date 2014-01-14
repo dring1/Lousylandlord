@@ -13,6 +13,7 @@ class SearchesController < ApplicationController
 	      gon.city = City.find(gon.city_id).name + ", " + Province.find(City.find(gon.city_id).province_id).name 
 	      gon.landlords = Landlord.where(city_id: gon.city_id)
 	      render :citymap
+	      return
 		else
 			@search.addresses
 		end

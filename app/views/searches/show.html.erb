@@ -22,8 +22,14 @@
 		<% end %>
 	<% end %>
 <% elsif @search.addresses.any? %>
+	<th>Address</th>
+	<th>Landlord Profile</th>
 	<% @search.addresses.each do |a| %>
-		meow
+		<tr>
+			<td>
+				<%= "#{a.number}" %>
+			</td>
+		</tr>
 	<% end %>
 
 <% else %>

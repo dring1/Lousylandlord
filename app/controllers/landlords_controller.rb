@@ -4,15 +4,7 @@ class LandlordsController < ApplicationController
   end
 
   def index
-    if params[:map_button] && !params[:city][:city_id].blank?
-      gon.city_id = params[:city][:city_id]
-      gon.addresses = Address.where(city_id: gon.city_id)
-      gon.city = City.find(gon.city_id).name + ", " + Province.find(City.find(gon.city_id).province_id).name 
-      gon.landlords = Landlord.where(city_id: gon.city_id)
-      render :citymap
-    else
-      @landlords = Landlord.paginate(page: params[:landlord]).order(:name).search(params[:search])
-    end
+    @landlords = Landlord.paginate(page: params[:landlord]).order(:name).search(params[:search])
   end
 
   def show  	
@@ -22,9 +14,6 @@ class LandlordsController < ApplicationController
     gon.city_id = Landlord.find(params[:id]).city_id
     gon.landlords = Landlord.where(city_id: gon.city_id)
     gon.city = City.find(gon.city_id).name + ", " + Province.find(City.find(gon.city_id).province_id).name 
-  end
-
-  def citymap
   end
 
   def create  	

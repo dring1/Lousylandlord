@@ -2,15 +2,15 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
-  #$('#city_city_id').parent().hide()
-  cities = $('#city_city_id').html()
-  $('#province_province_id').change ->
-    province = $('#province_province_id :selected').text()
+  #$('#search_city_id').parent().hide()
+  cities = $('#search_city_id').html()
+  $('#search_province_id').change ->
+    province = $('#search_province_id :selected').text()
     escaped_province = province.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
     options = $(cities).filter("optgroup[label='#{escaped_province}']").html()
     if options
-      $('#city_city_id').html(options)
-      $('#city_city_id').parent().show()
+      $('#search_city_id').html(options)
+      $('#search_city_id').parent().show()
     else
-      $('#city_city_id').empty()
-      $('#city_city_id').parent().hide()
+      $('#search_city_id').empty()
+      $('#search_city_id').parent().hide()
