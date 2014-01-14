@@ -8,7 +8,7 @@ class LandlordsController < ApplicationController
   end
 
   def show  	
-    @landlord = Landlord.find(params[:id])
+  @landlord = Landlord.find(params[:id])
     @comment = @landlord.comments.build
     gon.addresses = Address.where(landlord_id: params[:id])
     gon.city_id = Landlord.find(params[:id]).city_id

@@ -26,9 +26,8 @@
 	<th>Landlord Profile</th>
 	<% @search.addresses.each do |a| %>
 		<tr>
-			<td>
-				<%= "#{a.number}" %>
-			</td>
+			<td><%= "#{a.number}" %></td>
+			<td> <%= link_to 'Profile', Landlord.find_by(id: a.landlord_id) %> </td>
 		</tr>
 	<% end %>
 
