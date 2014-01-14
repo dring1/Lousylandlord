@@ -7,6 +7,12 @@ class SearchesController < ApplicationController
 		@search = Search.create!(search_params)
 		if params[:landlord]
 			@search.landlords
+		elsif params[:map_button] && !params[:search][:city_id].blank?
+	      gon.city_id = params[:search][:city_id]
+	      gon.addresses = Address.where(city_id: gon.city_id)
+	      gon.city = City.find(gon.city_id).name + ", " + Province.find(City.find(gon.city_id).province_id).name 
+	      gon.landlords = Landlord.where(city_id: gon.city_id)
+	      render :citymap
 		else
 			@search.addresses
 		end
@@ -19,6 +25,9 @@ class SearchesController < ApplicationController
 
 	def show
 		@search = Search.find(params[:id])
+	end
+
+	def citymap
 	end
 
 private

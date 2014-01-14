@@ -1,0 +1,36 @@
+<h1>Search Results</h1>
+
+<table class="table table-hover">
+
+<% if @search.getAccess %> 
+	<% if @search.landlords.any? %>
+		<th>Landlord's name</th>
+		<th>User Comment Total</th>
+		<th>See profile</th>
+		<%  @search.landlords.each do |l| %>
+			<tr >     
+		      <td class='user-list'>
+		      	<%= content_tag(:p, l.name,  :data => {:name => l.name }) %> 
+		      </td>
+		      <td>
+		      	<%= l.comments.count %>
+		      </td>      
+		      <td>
+		      	<%= link_to 'Profile', l %>
+		      </td>
+		    </tr>
+		<% end %>
+	<% end %>
+<% elsif @search.addresses.any? %>
+	<% @search.addresses.each do |a| %>
+		meow
+	<% end %>
+
+<% else %>
+<p>No Result</p>
+
+
+<% end %>
+
+</table>
+
