@@ -5,6 +5,7 @@ lastWindow = null
 blueIconLink = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
 
 gm_init = ->
+  return unless gon?
   geocoder = new google.maps.Geocoder()
   if gon.addresses.length > 0
     gm_center = new google.maps.LatLng(gon.addresses[0].latitude, gon.addresses[0].longitude)
@@ -25,6 +26,7 @@ encodeAddress = (address) ->
       alert("Geocoder could not find the location")
 
 displayAllMarkers = ->
+  return unless gon?
   i = 0
   infowindows = new Array()
   bounds = new google.maps.LatLngBounds();
