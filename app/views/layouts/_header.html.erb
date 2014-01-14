@@ -6,7 +6,7 @@
         <ul class="nav pull-right">
           <li><%= link_to "Home",    '/home' %></li>
           <li><%= link_to "Submit",    '/submit' %></li>
-          <li><%= link_to "Search", '/search' %></li>
+          <li><%= link_to "Search", new_search_path %></li>
          <% if signed_in? %>
             <li><%= link_to "Sign out", signout_path %></li>
           <% end %> 

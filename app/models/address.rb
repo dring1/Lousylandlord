@@ -6,7 +6,7 @@ class Address < ActiveRecord::Base
 	validates :landlord_id, presence: true
 	validates :street, presence: true
 	validates :number, presence: true
-	validates :unit, presence: true
+	#validates :unit, presence: true
 	geocoded_by :get_address
 	after_validation :geocode
 	# validates :longitude, presence: true

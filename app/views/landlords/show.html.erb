@@ -49,6 +49,8 @@
          		<!-- not safe?!? -->
           		<%= hidden_field_tag 'id', @landlord.id  %> 
  		        <%= hidden_field_tag 'city_id', @landlord.city.id  %>
+ 		        <%= hidden_field_tag 'province_id', @landlord.province.id  %>
+
 
            		<%= address_form.label :number %>
            		<%= address_form.text_field :number ,placeholder: "example: 123"%>
