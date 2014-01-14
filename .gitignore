@@ -21,3 +21,4 @@ doc/
 .secret
 
 tmp/cache/assets/development/sprockets/*
+/tmp/cache/assets/development/sprockets/*

@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  $('#landlord_city_id').parent().hide()
+  #$('#landlord_city_id').parent().hide()
   cities = $('#landlord_city_id').html()
   $('#landlord_province_id').change ->
     province = $('#landlord_province_id :selected').text()
