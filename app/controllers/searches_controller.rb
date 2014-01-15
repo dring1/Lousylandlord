@@ -15,6 +15,7 @@ class SearchesController < ApplicationController
 	      render :citymap
 	      return
 		else
+			p '***** address called ********'
 			@search.addresses
 		end
 		if @search.save 
