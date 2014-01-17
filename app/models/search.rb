@@ -15,6 +15,10 @@ class Search < ActiveRecord::Base
 		@@access		
 	end
 
+	def setAccess
+		@@access = false
+	end
+
 private
 	def find_landlords
 		landlord_result = Landlord.order(:name)

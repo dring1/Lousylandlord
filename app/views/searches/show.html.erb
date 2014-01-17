@@ -19,6 +19,8 @@
 		      	<%= link_to 'Profile', l %>
 		      </td>
 		    </tr>
+
+		    <% @search.setAccess %>
 		<% end %>
 	<% end %>
 <% elsif @search.addresses.any? %>
@@ -40,6 +42,8 @@
 				<% if a.province_id.present? %>
 					<%= ", #{Province.find_by(id: a.province_id).name}" %>
 				<% end %>
+
+				<%= ", #{a.postal}" %>
 			</td>
 			<td> <%= link_to 'Profile', Landlord.find_by(id: a.landlord_id) %> </td>
 		</tr>
