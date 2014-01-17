@@ -5,6 +5,7 @@ class Landlord < ActiveRecord::Base
 
     belongs_to :province
     belongs_to :city
+    belongs_to :user
 
     accepts_nested_attributes_for :comments, :addresses, allow_destroy: true
 
@@ -13,7 +14,6 @@ class Landlord < ActiveRecord::Base
 
     validates :city_id, presence: true
     validates :province_id, presence: true
-
     
    	
 	def self.search(search)
@@ -27,8 +27,6 @@ class Landlord < ActiveRecord::Base
     self.per_page = 10
     
     default_scope {order('landlords.name ASC')}
-
-
  
 
 end
