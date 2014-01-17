@@ -30,7 +30,7 @@
 				<p>
 					<%= link_to_function "#{f.number} #{f.street}, Apt/Unit: #{f.unit}, postal code: #{f.postal}", "centerMapOnCoordinates(#{f.latitude}, #{f.longitude})" %>
 					<br>
-					<% if signed_in? %>
+					<% if signed_in? && admin? %>
 						<%= link_to 'Delete', f, method: :delete,
                                      			 data: { confirm: "You sure?" },
                                      			 title: f %><br>

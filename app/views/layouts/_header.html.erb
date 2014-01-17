@@ -7,8 +7,10 @@
           <li><%= link_to "Home",    '/home' %></li>
           <li><%= link_to "Submit",    '/submit' %></li>
           <li><%= link_to "Search", new_search_path %></li>
-         <% if signed_in? %>
+          <% if signed_in? %>
             <li><%= link_to "Sign out", signout_path %></li>
+          <% else %>
+            <li><%= link_to "Sign in", signin_path %></li>
           <% end %> 
         </ul>
       </nav>
