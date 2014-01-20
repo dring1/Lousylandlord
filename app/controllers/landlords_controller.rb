@@ -56,13 +56,10 @@ class LandlordsController < ApplicationController
       flash[:success] = "Thank you for submitting a comment"
     else 
       redirect_to @landlord
-      flash[:error] = "Comments bust be between 15 and 500 characters! "
+      flash[:error] = "Comments must be between 15 and 500 characters! "
     end
   end
-
-  def create_address
-    
-  end 
+ 
 private
   def landlord_params
     params.require(:landlord).permit(:name, :city_id, :province_id)
