@@ -17,6 +17,7 @@ class SearchesController < ApplicationController
 		else
 			@search.addresses
 		end
+		
 		if @search.save 
 			redirect_to @search
 		else
