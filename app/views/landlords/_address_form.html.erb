@@ -1,0 +1,27 @@
+<div class="show-left">
+  <% if @landlord.user_id.nil? || signed_in? && (admin? || @landlord.user_id == current_user.id) %>
+      <p> Don't see the address? <a href="#" id="address-form-toggle">Add click here to add one</a> </p>
+  <% end %>
+  <div class="address-form ">
+  <%= form_for(:address, url: addresses_path) do  |address_form| %>
+
+  <!-- not safe?!? -->
+  <%= hidden_field_tag 'id', @landlord.id  %> 
+  <%= hidden_field_tag 'city_id', @landlord.city.id  %>
+  <%= hidden_field_tag 'province_id', @landlord.province.id  %>
+
+
+  <%= address_form.label :number %>
+  <%= address_form.text_field :number ,placeholder: "example: 123"%>
+  <%= address_form.label :street %>
+  <%= address_form.text_field :street ,placeholder: "example: Fake Street"%>
+  <%= address_form.label "#{:unit}# / Apt #"%>
+  <%= address_form.text_field :unit, placeholder: "example: 321"  %>
+  <%= address_form.label :postal %>
+  <%= address_form.text_field :postal ,placeholder: "example: A1B 2C3" %><br/>
+  <%= address_form.submit "Save Address",  class:"btn btn-primary" %>
+
+  <% end %>
+  </div>
+
+</div>

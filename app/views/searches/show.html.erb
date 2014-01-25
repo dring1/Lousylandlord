@@ -19,6 +19,8 @@
 		      	<%= link_to 'Profile', l %>
 		      </td>
 		    </tr>
+
+		    <% @search.setAccess %>
 		<% end %>
 	<% end %>
 <% elsif @search.addresses.any? %>
@@ -26,7 +28,23 @@
 	<th>Landlord Profile</th>
 	<% @search.addresses.each do |a| %>
 		<tr>
-			<td><%= "#{a.number}" %></td>
+			<td>
+				<%= "#{a.number} #{a.street}" %>
+				
+				<% if a.unit.present? %>
+					<%= ", Unit: #{a.unit if a.unit.present? }" %> 
+				<% end %>
+
+				<%= ", #{a.city.name} "%> 
+
+				
+
+				<% if a.province_id.present? %>
+					<%= ", #{Province.find_by(id: a.province_id).name}" %>
+				<% end %>
+
+				<%= ", #{a.postal}" %>
+			</td>
 			<td> <%= link_to 'Profile', Landlord.find_by(id: a.landlord_id) %> </td>
 		</tr>
 	<% end %>

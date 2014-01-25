@@ -1,0 +1,13 @@
+<% if @landlord.addresses.any? %>
+			<%  @landlord.addresses.each do |f| %>
+				<p>
+					<%= link_to_function "#{f.number} #{f.street}, Apt/Unit: #{f.unit}, postal code: #{f.postal}", "centerMapOnCoordinates(#{f.latitude}, #{f.longitude})" %>
+					<br>
+					<% if signed_in? && (admin? || @landlord.user_id == current_user.id) %>
+						<%= link_to 'Delete', f, method: :delete,
+                                     			 data: { confirm: "You sure?" },
+                                     			 title: f %><br>
+					<% end %>
+				</p>
+			<% end %>
+		<% end %>

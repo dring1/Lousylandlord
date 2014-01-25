@@ -1,38 +1,39 @@
 <div>
 
 	<%= form_for @search do |f| %>
-		<div class="center-div">
+	<div class="center-div">
 		<div class="show-left">
-		<%= f.label :name %>  	
-		<%= f.text_field :name , placeholder: "Example" %>
-				<%= f.label "Address Number" %>  	
-		<%= f.text_field :streetnum, placeholder: "123" %>
-		<%= f.label :street %>  	
-		<%= f.text_field :street, placeholder: "Fake St." %>
-		
-		
+			<%= f.label :name %>  	
+			<%= f.text_field :name , placeholder: "Example" %>
+			<%= f.label "Address Number" %>  	
+			<%= f.text_field :streetnum, placeholder: "123" %>
+			<%= f.label :street %>  	
+			<%= f.text_field :street, placeholder: "Fake St." %>
+
+
 		</div>
 
 		<div class="show-rights">
-	<%= f.label :postal %>  	
-		<%= f.text_field :postal, placeholder: 'A1B 2C3' %>
+			<%= f.label :postal %>  	
+			<%= f.text_field :postal, placeholder: 'A1B 2C3' %>
 
-		<div >
-			<%= f.label :province %>
-			<%= f.collection_select :province_id, Province.order(:name), :id, :name, include_blank: true %>
+			<div >
+				<%= f.label :province %>
+				<%= f.collection_select :province_id, Province.order(:name), :id, :name, include_blank: true %>
+			</div>
+			<div>
+				<%= f.label :city %>
+				<%= f.grouped_collection_select :city_id, Province.order(:name), :cities, :name,  :id, :name, include_blank: true %>	
+			</div>
 		</div>
-		<div>
-			<%= f.label :city %>
-			<%= f.grouped_collection_select :city_id, Province.order(:name), :cities, :name,  :id, :name, include_blank: true %>	
-		</div>
-		</div>
-		</div>
-		<div class="center">
-			<%= f.submit "Search Landlord", name: 'landlord', class:'btn' %>
-			<%= f.submit "Search Address", name: 'address',class:'btn' %>
-			<%= link_to  "All", landlords_path, class:'btn' %>  	
-			<%= f.submit "City Map", name: 'map_button', class:'btn' %>
-		</div>	
+	</div>
+	<div class="center ctr btn-group">
+		<%= f.submit "Search Landlord", name: 'landlord', class:'btn btn-success' %>
+		<%= f.submit "Search Address", name: 'address',class:'btn btn-info' %>
+
+
+		<%= f.submit "City Map", name: 'map_button', class:'btn btn-danger' %>
+	</div>	
 
 
 	<% end %>
