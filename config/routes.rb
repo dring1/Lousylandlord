@@ -10,6 +10,7 @@ LousyLandLord::Application.routes.draw do
   end
   resources :sessions
   resources :addresses
+  resources :comments
   
   resources :users
   resources :searches

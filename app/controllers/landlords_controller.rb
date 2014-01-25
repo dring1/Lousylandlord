@@ -9,7 +9,6 @@ class LandlordsController < ApplicationController
 
   def show  	
   @landlord = Landlord.find(params[:id])
-    @comment = @landlord.comments.build
     gon.addresses = Address.where(landlord_id: params[:id])
     gon.city_id = Landlord.find(params[:id]).city_id
     gon.landlords = Landlord.where(city_id: gon.city_id)
@@ -44,22 +43,7 @@ class LandlordsController < ApplicationController
     redirect_to landlords_url
   end
 
-  def create_comment
-    @landlord = Landlord.find(params[:id])
-    comment_params = {comment: params[:landlord][:comment][:comment], landlord_id: @landlord.id}
-    @comment = @landlord.comments.build
-    @comment.assign_attributes(comment_params)
-    @comment.setIP request.remote_ip
 
-    if @landlord.save
-      redirect_to @landlord
-      flash[:success] = "Thank you for submitting a comment"
-    else 
-      redirect_to @landlord
-      flash[:error] = "Comments must be between 15 and 500 characters! "
-    end
-  end
- 
 private
   def landlord_params
     params.require(:landlord).permit(:name, :city_id, :province_id)

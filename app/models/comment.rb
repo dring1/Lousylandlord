@@ -2,7 +2,7 @@ class Comment < ActiveRecord::Base
 	belongs_to :landlord
 
 	validates :landlord_id, presence: true
-	#åvalidates :ip, presence: true
+	#avalidates :ip, presence: true
 	#validates :terms, presence: true
     validates :comment, presence: true, 
 				length: {minimum: 15, maximum: 500}		
