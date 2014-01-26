@@ -37,7 +37,7 @@ textarea {
 
 a{
   &:hover{
-    color: black;
+    color: yellow;
   }
 }
 
@@ -105,16 +105,10 @@ footer {
   margin-top: 10%;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: #999;
 }
 
-footer a {
-/*  color: #555;
-*/}  
 
-footer a:hover { 
-  color: #222;
-}
+
 
 footer small {
   float: left;
