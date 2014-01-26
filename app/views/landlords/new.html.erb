@@ -7,9 +7,6 @@
 
 	<%= form_for @landlord, {:html => { :class => "form-horizontal" }} do |f| %>
 
-
-
-
 	<div class ="control-group center-div">
 		<div class="controls">
 		<%= f.label "Landlord's Name : "%>
@@ -26,6 +23,13 @@
 
 			<%= f.grouped_collection_select :city_id, Province.order(:name), :cities, :name,  :id, :name, include_blank: true %>	
 		</div>
+	<% if signed_in? %>
+		<div class="controls">
+			<br/>
+			<p><%= f.check_box :user %> I am this landlord</p>
+			<%= f.hidden_field :user_id, value: current_user.id %>
+		</div>
+	<% end %>
 	</div>
 
 

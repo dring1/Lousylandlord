@@ -8,7 +8,7 @@ class LandlordsController < ApplicationController
   end
 
   def show  	
-  @landlord = Landlord.find(params[:id])
+    @landlord = Landlord.find(params[:id])
     gon.addresses = Address.where(landlord_id: params[:id])
     gon.city_id = Landlord.find(params[:id]).city_id
     gon.landlords = Landlord.where(city_id: gon.city_id)
@@ -17,18 +17,21 @@ class LandlordsController < ApplicationController
 
   def create  	
 
-    other_params = params[:landlord].slice!(:name, :city_id, :province_id)
-
-    @landlord = Landlord.find_or_initialize_by(params[:landlord].permit(:name, :city_id, :province_id))
+    other_params = params[:landlord].slice!(:name, :city_id, :province_id, :user, :user_id)
+    # check if the landlord checkbox is checked
+    if params[:landlord][:user] == '1'
+      @landlord = Landlord.find_or_initialize_by(params[:landlord].permit(:name, :city_id, :province_id, :user_id))
+    elsif
+      @landlord = Landlord.find_or_initialize_by(params[:landlord].permit(:name, :city_id, :province_id))
+    end
     if @landlord.save 
       flash[:success] = "Thank you for submitting a landlord"
       redirect_to @landlord
     else
-       render :new
-  
+      render :new
     end
-   end
 
+   end
 
 
    def update

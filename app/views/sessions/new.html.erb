@@ -1,5 +1,8 @@
-<div class="light-font">
+<div class="center">
   <h1>Sign in</h1>
+</div>
+<br/>
+<br/>
 
   <div class="row">
   <div class="span6 offset3 text-center ">
@@ -14,6 +17,7 @@
 
       <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
     <% end %>
-  </div>
+
+    <p>Are you a landlord? <%= link_to "Create and account now!", signup_path %></p>
   </div>
 </div>

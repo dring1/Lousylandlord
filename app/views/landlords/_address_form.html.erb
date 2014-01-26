@@ -1,5 +1,7 @@
 <div class="show-left">
-  <p> Don't see the address? <a href="#" id="address-form-toggle">Add click here to add one</a> </p>  
+  <% if @landlord.user_id.nil? || signed_in? && (admin? || @landlord.user_id == current_user.id) %>
+      <p> Don't see the address? <a href="#" id="address-form-toggle">Add click here to add one</a> </p>
+  <% end %>
   <div class="address-form ">
     <%= form_for(:address, url: addresses_path) do  |address_form| %>
 

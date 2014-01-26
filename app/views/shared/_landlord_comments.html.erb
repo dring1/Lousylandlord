@@ -1,7 +1,7 @@
 <% @landlord.comments.each do |f| %>
 	<% if f.valid? %> 
 		<%= content_tag :p, f.comment , class:'comment-text ' %> 
-		<% if signed_in? %>		
+		<% if signed_in? && admin? %>		
 			<%= link_to 'Delete', landlord_comment_path(@landlord, f), method: :delete %><br>
 	    <% end %>
 	<% end %>

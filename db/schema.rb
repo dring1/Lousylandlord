@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140113182410) do
+ActiveRecord::Schema.define(version: 20140118155747) do
 
   create_table "addresses", force: true do |t|
     t.string   "number"
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 20140113182410) do
     t.float    "latitude"
     t.float    "longitude"
     t.integer  "province_id"
+    t.integer  "price"
+    t.integer  "bedrooms"
+    t.boolean  "availability", default: false
   end
 
   create_table "cities", force: true do |t|
@@ -46,6 +49,7 @@ ActiveRecord::Schema.define(version: 20140113182410) do
     t.integer  "province_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "provinces", force: true do |t|
@@ -74,7 +78,7 @@ ActiveRecord::Schema.define(version: 20140113182410) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
-    t.boolean  "admin",           default: true
+    t.boolean  "admin",           default: false
     t.string   "remember_token"
   end
 
