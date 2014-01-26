@@ -7,7 +7,6 @@ namespace :gen_db do
 			if line[0..1] === '--'
 				@province = Province.new(name: "#{line[2..-2]}")
 				@province.save
-				#p @province
 			else
 				c = City.new(name: "#{line[0..-2]}")
 				c.province = @province
