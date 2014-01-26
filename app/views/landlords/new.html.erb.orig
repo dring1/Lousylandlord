@@ -1,0 +1,58 @@
+<div class="light-font">
+
+	<h1 class="center">Submit a Landlord!</h1>
+
+
+	<%= render '/shared/error_messages' %>
+
+<<<<<<< HEAD
+	<%= form_for @landlord, {:html => { :class => "form-horizontal" }} do |f| %>
+
+
+
+=======
+<div class ="control-group center-div">
+	<div class="controls">
+		<%= f.label "Landlord's Name : "%>
+	
+		<%= f.text_field :name  %>
+	
+>>>>>>> 220e93bb5b4d7e12cb509ecea6e04a0216fb338d
+
+	<div class ="control-group center-div">
+		<div class="controls">
+		<%= f.label "Landlord's Name : "%>
+		
+			<%= f.text_field :name  %>
+		
+
+			<%= f.label :province_id %>
+
+			<%= f.collection_select :province_id, Province.order(:name), :id, :name, include_blank: true %>		
+		</div>
+		<div class="controls">
+			<%= f.label :city_id %>
+
+			<%= f.grouped_collection_select :city_id, Province.order(:name), :cities, :name,  :id, :name, include_blank: true %>	
+		</div>
+	</div>
+<<<<<<< HEAD
+=======
+	<% if signed_in? %>
+		<div class="controls">
+			<br/>
+			<p><%= f.check_box :user %> I am this landlord</p>
+			<%= f.hidden_field :user_id, value: current_user.id %>
+		</div>
+	<% end %>
+</div>
+>>>>>>> 220e93bb5b4d7e12cb509ecea6e04a0216fb338d
+
+
+	<div class="center submit">
+		<%= f.submit "Submit", class: " btn btn-large btn-primary" %>
+	</div>
+	<% end %>
+
+
+</div>
