@@ -66,7 +66,7 @@ root.centerMapOnCoordinates = (lat, long) ->
   map.setCenter(new google.maps.LatLng(lat, long));
 
 root.displayLandmarkMarker = ->
-  address = document.getElementById('place').value
+  address = document.getElementById('place').value + ", " + gon.city
   if infowindows == null
     infowindows = new Array()
   geocoder.geocode
