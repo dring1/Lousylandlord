@@ -1,29 +1,30 @@
-<div class="center">
-	<h1>Create a Landlord Account</h1>
-</div>
-<br/>
-<br/>
 
-<div class="span12">
-	<div class="row">
-	  <div class="span3 offset3">
-	    <%= form_for(@user) do |f| %>
-
-			<%= f.label :email %>
-			<%= f.text_field :email %>
-
-			<%= f.label :password %>
-			<%= f.password_field :password %>
-
-			<%= f.label :password_confirmation, "Password Confirmation" %>
-			<%= f.password_field :password_confirmation %>
-
-			<br/>
-			<%= f.submit "Create", class: "btn btn-large btn-primary" %>
-	    <% end %>
-	  </div>
-	  <div class="span3 well">
-	  	<p> <b>Account Manager</b><br/>By creating an account you will be able to manage landlord accounts that you create. You will be able to add specific information about rent locations such as prices, number of bedrooms and much more!<br/> <a href="#">Learn more...</a> </p>
-	  </div>
+	<div class="center light-font">
+		<h1>Create a Landlord Account</h1>
 	</div>
-</div>
+	<br/>
+	<br/>
+
+	<div class="span12">
+		<div class="row">
+		  <div class="span3 offset3 light-font">
+		    <%= form_for(@user) do |f| %>
+
+				<%= f.label :email %>
+				<%= f.text_field :email %>
+
+				<%= f.label :password %>
+				<%= f.password_field :password %>
+
+				<%= f.label :password_confirmation, "Password Confirmation" %>
+				<%= f.password_field :password_confirmation %>
+
+				<br/>
+				<%= f.submit "Create", class: "btn btn-large btn-primary" %>
+		    <% end %>
+		  </div>
+		  <div class="span3 well">
+		  	<p> <b>Account Manager</b><br/>By creating an account you will be able to manage landlord accounts that you create. You will be able to add specific information about rent locations such as prices, number of bedrooms and much more!<br/> <a href="#">Learn more...</a> </p>
+		  </div>
+		</div>
+	</div>
