@@ -5,7 +5,7 @@
 	<h3>Leave a comment</h3>
 	<span>Total comments : <%= @landlord.comments.count %> </span> 
 
-	<%= form_for(:comment, url: comments_path) do |comment_form| %>
+	<%= form_for(:comment, url: comments_path, remote: true) do |comment_form| %>
 	<%= comment_form.text_area :comment, :rows => "10", 
 	class:'frm-exp' , placeholder: 	"Comments must be between 15 and 500 characters!" %>
     <%= hidden_field_tag 'id', @landlord.id  %> 
