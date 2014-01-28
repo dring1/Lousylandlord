@@ -36,8 +36,9 @@ textarea {
 
 
 a{
+  color: yellow;
   &:hover{
-    color: yellow;
+    color: #00FF1E;
   }
 }
 
@@ -280,6 +281,7 @@ footer ul li {
 }
 
 .light-font{
+
   color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
