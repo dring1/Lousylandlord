@@ -5,7 +5,7 @@ module LandlordsHelper
   	end
 
   	def google_api_url
-    	"http://maps.googleapis.com/maps/api/js"
+    	"https://maps.googleapis.com/maps/api/js"
   	end
 
   	def google_api_access
