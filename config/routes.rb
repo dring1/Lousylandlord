@@ -29,5 +29,4 @@ LousyLandLord::Application.routes.draw do
   post '/landlord_searching', to: 'searches#create_landlord_search'
   get '/signin', to: 'sessions#new'
   get '/signout', to: 'sessions#destroy'
-  get '/signup', to: 'users#new'
 end
