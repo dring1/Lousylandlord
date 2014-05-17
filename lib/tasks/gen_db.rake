@@ -1,5 +1,4 @@
 namespace :gen_db do
-	desc "TODO"
 	task :gen_provs_cities => :environment do
 		contents = File.read 'lib/tasks/list.txt'
  
@@ -16,5 +15,13 @@ namespace :gen_db do
 		end
 
 	end
-
+	task :gen_landlords => :environment do
+		first_names = ['John', 'Michael', 'Bubbles', 'Guy','smith', 'burns', 'apples', 'dirtbag']
+		(1..1000).each do
+			p Landlord.create(name: "Shtbucket", 
+				city_id: City.all.sample(1)[0].id , 
+				province_id: Province.all.sample(1)[0].id)
+			
+		end
+	end
 end

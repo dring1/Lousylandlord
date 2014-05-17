@@ -7,3 +7,6 @@ jQuery ->
 	$('.address-form').hide()
 	$('#address-form-toggle').click ->
 		$('.address-form').toggle()
+		$(document.body).animate({
+		    'scrollTop':   $('.address-form').offset().top
+		}, 2000)
