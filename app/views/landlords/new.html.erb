@@ -1,28 +1,16 @@
-<div class="light-font">
+<div class="light-font ctr half">
 
 	<h1 class="center">Submit a Landlord!</h1>
 
 
 	<%= render '/shared/error_messages' %>
 
-	<%= form_for @landlord, {:html => { :class => "form-horizontal" }} do |f| %>
+	<%= bootstrap_form_for @landlord do |f| %>
 
-	<div class ="control-group center-div">
-		<div class="controls">
-		<%= f.label "Landlord's Name : "%>
-		
+	<div >
 			<%= f.text_field :name  %>
-		
-
-			<%= f.label :province_id %>
-
 			<%= f.collection_select :province_id, Province.order(:name), :id, :name, include_blank: true %>		
-		</div>
-		<div class="controls">
-			<%= f.label :city_id %>
-
 			<%= f.grouped_collection_select :city_id, Province.order(:name), :cities, :name,  :id, :name, include_blank: true %>	
-		</div>
 	</div>
 
 
