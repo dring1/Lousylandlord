@@ -1,3 +1,6 @@
+This version of Lousy Landlord is depreceated.
+
+A nodejs version has been developed at will be released Feb 2015.
 ---- Lousylandlord is under development. ----
 
 Ever have a really bad landlord experience? Are you a student checking out rentals for the first time?
